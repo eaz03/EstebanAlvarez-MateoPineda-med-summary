@@ -6,8 +6,8 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 
 ## Contenido
 - README.md: Información general, modelo y familia escogidos y resultados
-- [[data.md]]: Información detallada sobre el dataset
-- [[model_selection.md]]: Detalle sobre selección del modelo
+- [data.md](data.md): Información detallada sobre el dataset
+- [Selección del Modelo](model_selection.md): Detalle sobre selección del modelo
 -  : Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
 
 
@@ -21,7 +21,7 @@ Para llegar al modelo Flan-T5 usado, realizamos un proceso de busqueda basado en
 
 ## Baseline de Comparación
 
-El baseline para realizar la comparación es el mismo modelo sin fine-tuning (zero-shot) usando el mismo prompt de instrucción que usamos después del fine-tuning. Esta es una buena forma de comparación porque estamos tratando de asegurar que el menor número de variables sean las que influyan en los resultados del modelo y que la diferencia observada sea solamente por el fine-tuning y no por otros factores. 
+El baseline para realizar la comparación es el mismo modelo sin fine-tuning (zero-shot) usando el mismo prompt de instrucción que usamos después del fine-tuning. Esta es una buena forma de comparación porque estamos tratando de asegurar que el menor número de variables sean las que influyan en los resultados del modelo y que la diferencia observada sea solamente por el fine-tuning y no por otros factores. Para compararlos, se realizan pruebas empiricas con unos pocos ejemplos, asi como métricas de similitud entre el texto generado por el modelo y el teórico como ROUGE y BERTScore.
 
 ## Tabla de Resultados
 

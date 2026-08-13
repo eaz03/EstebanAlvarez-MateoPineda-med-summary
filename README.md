@@ -4,12 +4,26 @@ Tópicos Especiales y Aplicaciones en Inteligencia Artificial — SI4006
 
 Sistema que toma la conversación entre un médico y su paciente y genera un borrador de la historia clínica, para ahorrarle tiempo de documentación al personal de salud.
 
-## Objetivo general
-Afinar con LoRA el modelo base elegido sobre texto real del dominio y demostrar, con una métrica adecuada sobre el mismo conjunto de validación, la mejora frente a un baseline razonable (modelo base en zero-shot).
+## Contenido
+- README.md: Información general, modelo y familia escogidos y resultados
+- [[data.md]]: Información detallada sobre el dataset
+- [[model_selection.md]]: Detalle sobre selección del modelo
+-  : Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
 
-## Objetivo del proyecto
-Resumir diálogos médico–paciente en notas clínicas / historia clínica preliminar: el modelo recibe la transcripción de la consulta y produce un resumen estructurado que sirve como borrador del registro clínico.
 
-## Contenido del Repositorio
+## Modelo Base y Familia Escogidos
 
-- 
+__Escogimos la familia encoder-decoder, por su capacidad de obtener información contextual del texto a resumir con el encoder, y de generar nuevo texto resumen que tome la información contextual con el decoder.__
+
+Nuestra tarea es la transformación y resumen de texto, por lo que se espera que la familia de modelo que pueda servir es un encoder-decoder. Basado en esto, la familia de modelos T5 era la opción más utilizada y efectiva para la tarea. De esta familia elegimos el modelo Flan-T5 (por encima de T5 o T5-small) porque este ya cuenta con cierto instruction-tuning, lo cual es una ventaja al no tener que enseñarle comportamiento de seguimiento de instrucciones, y que el baseline tenga mejores capacidades zero-shot.
+
+Para llegar al modelo Flan-T5 usado, realizamos un proceso de busqueda basado en los criterios de nuestro problema, e inicialmente habíamos seleccionado el modelo medgemma-1.5-4b-it. Los detalles del proceso de selección se pueden encontrar en 
+
+## Baseline de Comparación
+
+El baseline para realizar la comparación es el mismo modelo sin fine-tuning (zero-shot) usando el mismo prompt de instrucción que usamos después del fine-tuning. Esta es una buena forma de comparación porque estamos tratando de asegurar que el menor número de variables sean las que influyan en los resultados del modelo y que la diferencia observada sea solamente por el fine-tuning y no por otros factores. 
+
+## Tabla de Resultados
+
+## Frase de lectura honesta
+

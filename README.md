@@ -7,7 +7,7 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 ## Contenido
 - README.md: Información general, modelo y familia escogidos y resultados
 - [data.md](data.md): Información detallada sobre el dataset
-- [Selección del Modelo](model_selection.md): Detalle sobre selección del modelo (no pedido, pero se exponen experimentos y criterios de selección)
+- [Selección del Modelo](Proceso.md): Detalle sobre selección del modelo (no pedido, pero se exponen experimentos y criterios de selección)
 -  [Fine tuning con LoRA](Entrega1_TopicosIA_EAZ_MPA.ipynb): Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
 
 
@@ -17,7 +17,7 @@ __Escogimos la familia encoder-decoder, por su capacidad de obtener información
 
 Nuestra tarea es la transformación y resumen de texto, por lo que se espera que la familia de modelo que pueda servir es un encoder-decoder. Basado en esto, la familia de modelos T5 era la opción más utilizada y efectiva para la tarea. De esta familia elegimos el modelo Flan-T5 (por encima de T5 o T5-small) porque este ya cuenta con cierto instruction-tuning, lo cual es una ventaja al no tener que enseñarle comportamiento de seguimiento de instrucciones, y que el baseline tenga mejores capacidades zero-shot.
 
-Para llegar al modelo Flan-T5 usado, realizamos un proceso de busqueda basado en los criterios de nuestro problema, e inicialmente habíamos seleccionado el modelo medgemma-1.5-4b-it. Los detalles del proceso de selección se pueden encontrar en 
+Para llegar al modelo Flan-T5 usado, realizamos un proceso de busqueda basado en los criterios de nuestro problema, e inicialmente habíamos seleccionado el modelo medgemma-1.5-4b-it. Los detalles del proceso de selección se pueden encontrar en [este archivo.](Proceso.md)
 
 ## Baseline de Comparación
 
@@ -29,13 +29,13 @@ Como métricas cuantitativas se utilizaron las medidas ROUGE y BERTScore. Las me
 
 | Metric     | Baseline | Finetuned |       Δ |
 | ---------- | -------: | --------: | ------: |
-| ROUGE-1    |   0.2438 |    0.3613 | +0.1175 |
-| ROUGE-2    |   0.0762 |    0.1289 | +0.0527 |
-| ROUGE-L    |   0.2043 |    0.2987 | +0.0944 |
-| ROUGE-Lsum |   0.2041 |    0.2976 | +0.0936 |
-| BERT F1    |   0.3136 |    0.3937 | +0.0801 |
+| ROUGE-1    |   0.2415 |    0.3255 | +0.0840 |
+| ROUGE-2    |   0.0891 |    0.1319 | +0.0428 |
+| ROUGE-L    |   0.2037 |    0.2707 | +0.0670 |
+| ROUGE-Lsum |   0.2036 |    0.2720 | +0.0684 |
+| BERT F1    |   0.2923 |    0.3681 | +0.0758 |
 
-Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. Para ROUGE-1 con un 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. Es importante tener en cuenta que dos resúmenes válidos pueden usar palabras completamente distintas, especialmente en el campo médico. Es por esto mismo que ROUGE-2 y ROUGE-L permanecen bajos, pero aún así mejoran. 
+Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. Para ROUGE-1 con un 8.4% de mejora, implica que alrededor del 32% de las palabras se comparten entre la predicción y el objetivo. Es importante tener en cuenta que dos resúmenes válidos pueden usar palabras completamente distintas, especialmente en el campo médico. Es por esto mismo que ROUGE-2 y ROUGE-L permanecen bajos, pero aún así mejoran. 
 
 ## Frase de lectura honesta
 

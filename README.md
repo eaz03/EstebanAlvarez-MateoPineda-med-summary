@@ -35,12 +35,8 @@ Como métricas cuantitativas se utilizaron las medidas ROUGE y BERTScore. Las me
 | ROUGE-Lsum |   0.2041 |    0.2976 | +0.0936 |
 | BERT F1    |   0.3136 |    0.3937 | +0.0801 |
 
-Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. 
-
-**ROUGE-1:** 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. 
-**ROUGE-2**: 5.2% de mejora, implica que 
-
-Cualitativamente, evidenciamos una mejora significativa, ya que el  modelo pasa de tratar de generar algo "plausible" pero incorrecto como una continuación del dialogo, a generar en todos los casos evaluados texto de resumen. Vemos que difiere un poco las palabras exactas, pero logra aprender el estilo y manera  del dataset.
+Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. Para ROUGE-1 con un 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. Es importante tener en cuenta que dos resúmenes válidos pueden usar palabras completamente distintas, especialmente en el campo médico. Es por esto mismo que ROUGE-2 y ROUGE-L permanecen bajos, pero aún así mejoran. 
 
 ## Frase de lectura honesta
 
+Cualitativamente, evidenciamos una mejora significativa, ya que el  modelo pasa de tratar de generar algo "plausible" pero incorrecto como una continuación del dialogo, a generar en todos los casos evaluados texto de resumen. Vemos que difiere un poco las palabras exactas, pero logra aprender el estilo y manera  del dataset, así como fundamentalmente no alterar, inventar o alucinar información. Cuantitativamente, los resultados indican mejora, pero se tienen en cuenta sus limitaciones.

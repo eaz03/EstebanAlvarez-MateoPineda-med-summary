@@ -1,5 +1,5 @@
 Tópicos Especiales y Aplicaciones en Inteligencia Artificial — SI4006 
-# Entrega M1 — Fine-tuning baseline
+# Entrega M1 - Fine-tuning baseline
 ## Esteban Álvarez Zuluaga, Mateo Pineda Álvarez
 
 Sistema que toma la conversación entre un médico y su paciente y genera un borrador de la historia clínica, para ahorrarle tiempo de documentación al personal de salud.
@@ -8,7 +8,7 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 - README.md: Información general, modelo y familia escogidos y resultados
 - [data.md](data.md): Información detallada sobre el dataset
 - [Selección del Modelo](model_selection.md): Detalle sobre selección del modelo
--  [Fine tuning con LoRA](Entrega1-TopicosIA_EAZ_MPA.ipynb): Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
+-  [Fine tuning con LoRA](Entrega1_TopicosIA_EAZ_MPA.ipynb): Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
 
 
 ## Modelo Base y Familia Escogidos

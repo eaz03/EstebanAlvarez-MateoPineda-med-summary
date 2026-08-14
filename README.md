@@ -7,7 +7,7 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 ## Contenido
 - README.md: Información general, modelo y familia escogidos y resultados
 - [data.md](data.md): Información detallada sobre el dataset
-- [Selección del Modelo](model_selection.md): Detalle sobre selección del modelo
+- [Selección del Modelo](model_selection.md): Detalle sobre selección del modelo (no pedido, pero se exponen experimentos y criterios de selección)
 -  [Fine tuning con LoRA](Entrega1_TopicosIA_EAZ_MPA.ipynb): Cuaderno de colab con fine-tuning LoRA y pruebas contra baseline
 
 

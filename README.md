@@ -29,13 +29,13 @@ Como métricas cuantitativas se utilizaron las medidas ROUGE y BERTScore. Las me
 
 | Metric     | Baseline | Finetuned |       Δ |
 | ---------- | -------: | --------: | ------: |
-| ROUGE-1    |   0.2415 |    0.3255 | +0.0840 |
-| ROUGE-2    |   0.0891 |    0.1319 | +0.0428 |
-| ROUGE-L    |   0.2037 |    0.2707 | +0.0670 |
-| ROUGE-Lsum |   0.2036 |    0.2720 | +0.0684 |
-| BERT F1    |   0.2923 |    0.3681 | +0.0758 |
+| ROUGE-1    |   0.2432 |    0.3368 | +0.0936 |
+| ROUGE-2    |   0.0894 |    0.1332 | +0.0438 |
+| ROUGE-L    |   0.2036 |    0.2822 | +0.0786 |
+| ROUGE-Lsum |   0.2038 |    0.2824 | +0.0786 |
+| BERT F1    |   0.2923 |    0.3750 | +0.0827 |
 
-Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. Para ROUGE-1 con un 8.4% de mejora, implica que alrededor del 32% de las palabras se comparten entre la predicción y el objetivo. Es importante tener en cuenta que dos resúmenes válidos pueden usar palabras completamente distintas, especialmente en el campo médico. Es por esto mismo que ROUGE-2 y ROUGE-L permanecen bajos, pero aún así mejoran. 
+Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. Para ROUGE-1 con un 9.4% de mejora, implica que alrededor del 33% de las palabras se comparten entre la predicción y el objetivo. Es importante tener en cuenta que dos resúmenes válidos pueden usar palabras completamente distintas, especialmente en el campo médico. Es por esto mismo que ROUGE-2 y ROUGE-L permanecen bajos, pero aún así mejoran. 
 
 ## Frase de lectura honesta
 

@@ -37,10 +37,10 @@ Como métricas cuantitativas se utilizaron las medidas ROUGE y BERTScore. Las me
 
 Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. 
 
-ROUGE-1: 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. 
-ROUGE-2
+**ROUGE-1:** 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. 
+**ROUGE-2**: 5.2% de mejora, implica que 
 
-Cualitativamente, evidenciamos una mejora significativa, ya que el  modelo pasa de generar aleatoriamente 
+Cualitativamente, evidenciamos una mejora significativa, ya que el  modelo pasa de tratar de generar algo "plausible" pero incorrecto como una continuación del dialogo, a generar en todos los casos evaluados texto de resumen. Vemos que difiere un poco las palabras exactas, pero logra aprender el estilo y manera  del dataset.
 
 ## Frase de lectura honesta
 

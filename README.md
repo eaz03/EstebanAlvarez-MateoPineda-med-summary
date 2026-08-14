@@ -25,5 +25,14 @@ El baseline para realizar la comparación es el mismo modelo sin fine-tuning (ze
 
 ## Tabla de Resultados
 
+| Metric     | Baseline | Finetuned |       Δ |
+| ---------- | -------: | --------: | ------: |
+| ROUGE-1    |   0.2438 |    0.3613 | +0.1175 |
+| ROUGE-2    |   0.0762 |    0.1289 | +0.0527 |
+| ROUGE-L    |   0.2043 |    0.2987 | +0.0944 |
+| ROUGE-Lsum |   0.2041 |    0.2976 | +0.0936 |
+| BERT F1    |   0.3136 |    0.3937 | +0.0801 |
+
+
 ## Frase de lectura honesta
 

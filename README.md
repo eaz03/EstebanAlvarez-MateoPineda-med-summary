@@ -25,6 +25,8 @@ El baseline para realizar la comparación es el mismo modelo sin fine-tuning (ze
 
 ## Tabla de Resultados
 
+Como métricas cuantitativas se utilizaron las medidas ROUGE y BERTScore. Las medidas ROUGE miden similitud sintáctica de cadenas de texto, ROUGE-1 toma solo por palabra, ROUGE-2 por par de palabras y ROUGE-L por la subsecuencia común más grande. BERTScore corresponde a un cálculo de similitud de los embeddings generados por BERT. Siendo este el caso ROUGE permite cuantificar similitud sintáctica, y BERT semántica.
+
 | Metric     | Baseline | Finetuned |       Δ |
 | ---------- | -------: | --------: | ------: |
 | ROUGE-1    |   0.2438 |    0.3613 | +0.1175 |
@@ -33,6 +35,12 @@ El baseline para realizar la comparación es el mismo modelo sin fine-tuning (ze
 | ROUGE-Lsum |   0.2041 |    0.2976 | +0.0936 |
 | BERT F1    |   0.3136 |    0.3937 | +0.0801 |
 
+Vemos que en todas las métricas se logró mejora. Parece ser pequeña, pero se debe entender lo que representan. 
+
+ROUGE-1: 11.7% de mejora, implica que casi el 40% de las palabras se comparten entre la predicción y el objetivo. 
+ROUGE-2
+
+Cualitativamente, evidenciamos una mejora significativa, ya que el  modelo pasa de generar aleatoriamente 
 
 ## Frase de lectura honesta
 

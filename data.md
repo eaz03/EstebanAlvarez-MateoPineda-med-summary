@@ -18,7 +18,7 @@ El formato de las notas clínicas es el formato **SOAP**, que es el más usado, 
 
 ## Tamaño
 
-El dataset final incluye **1700 diálogos** médico-paciente junto con su resumen para la historia clínica. Cada diálogo, junto con su resumen, se dividió posteriormente en diferentes secciones de historia clínica, para crear un resumen de acuerdo con lo que se espera de esa parte de la historia clínica:
+El dataset final incluye **1701 diálogos** médico-paciente junto con su resumen para la historia clínica. Cada diálogo, junto con su resumen, se clasificó posteriormente en diferentes secciones de historia clínica, para crear un resumen de acuerdo con lo que se espera de esa parte de la historia clínica:
 
 | # | Sección | Descripción |
 |---|---|---|
@@ -43,7 +43,7 @@ El dataset final incluye **1700 diálogos** médico-paciente junto con su resume
 | 19 | `other_history` | Otros antecedentes |
 | 20 | `labs` | Paraclínicos |
 
-Esta división hace que la unidad de análisis del dataset sean secciones específicas de la historia clínica y no el diálogo completo. Esto hace que se expanda el dataset y se obtenga un total de **15982 registros**.
+Esta división hace que la unidad de análisis del dataset sean secciones específicas de la historia clínica y no una interacción completa de principio a fin entre médico y paciente.
 
 ## División de los datos
 
@@ -51,9 +51,9 @@ El repositorio de GitHub ya trae el dataset dividido en el conjunto de train, va
 
 | Conjunto | Registros | Porcentaje |
 |---|---|---|
-| Train | 11454 | 71.67% |
-| Test | 3714 | 23.24% |
-| Validación | 814 | 5.09% |
+| Train | 1201 | 70.61% |
+| Test | 400 | 23.52% |
+| Validación | 100 | 5.88% |
 
 ## Idioma
 

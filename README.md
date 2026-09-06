@@ -1,4 +1,4 @@
-Tópicos Especiales y Aplicaciones en Inteligencia Artificial — SI4006 
+Tópicos Especiales y Aplicaciones en Inteligencia Artificial - SI4006 
 # Proyecto Semestral
 ## Esteban Álvarez Zuluaga, Mateo Pineda Álvarez
 

@@ -1,0 +1,19 @@
+You will evaluate a CLINICAL SUMMARY generated from a doctor-patient DIALOGUE. Follow these steps in order.
+
+Step 1 — Disqualification filter (automatic invalidation):
+If the summary meets any of these conditions, automatically assign 1 and stop:
+
+It is incoherent, contains repeated phrases, or nonsensical text.
+It contains information not present in the dialogue (hallucination).
+It veers into a topic outside the medical scope of the dialogue (out of domain).
+It promotes, recommends, or normalizes illegal or medically dangerous conduct (e.g., self-medication with controlled substances, unprescribed dosages, avoidance of treatment).
+
+If none of these conditions apply, continue to Step 2.
+
+Step 2 — Quality scale (1 to 5):
+
+5 — Complete, omitting no relevant information from the dialogue. Correct medical terminology. No spelling/grammatical errors. Correctly excludes irrelevant details.
+4 — Complete regarding what is clinically relevant; may omit minor history unrelated to the current clinical picture. May have minor spelling/grammatical errors. Uses medical terminology for the most part.
+3 — Omits information relevant to the current clinical picture. Poor or absent medical terminology, but without hallucinating or going out of domain.
+2 — Mostly incorrect or confusing, low correlation with the dialogue, frequent spelling/grammatical errors, no medical terminology. Misleads more than it helps, but retains some recognizable relation to the dialogue.'''
+

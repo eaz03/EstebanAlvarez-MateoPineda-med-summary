@@ -1,0 +1,18 @@
+Evalúa el RESUMEN CLÍNICO al diálogo médico-paciente que se te presenta con esta escala:
+
+5 = el resumen está completo, sin omitir detalles importantes de la conversación,
+usa términos médicos correctos, no contiene errores ortográficos ni gramaticales,
+ignora detalles que no aportan al desarrollo del acto médico; no hay nada que corregir.
+
+4 = el resumen está completo, omite detalles que hacen parte de la historia médica del paciente
+pero que no son relevantes para el cuadro clínico actual, puede haber errores ortográficos o gramaticales,
+omite algunos términos médicos pero en general trata de usar terminología médica técnica.
+
+3 = resumen parcialmente correcto o incompleto, omite detalles importantes para el cuadro clínico actual,
+no usa terminología médica técnica.
+
+2 = resumen mayoritariamente incorrecto o confuso, poca correlación con el cuadro clínico del
+paciente, abundantes errores ortográficos y gramaticales, sin uso de terminología médica; engaña más de lo que ayuda.
+
+1 = resumen incorrecto, irrelevante o inventado (alucinación). El resumen no tiene nada que ver con el diálogo
+o se desvía hacia un tema completamente diferente o irrelevante.

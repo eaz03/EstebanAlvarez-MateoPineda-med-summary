@@ -1,5 +1,5 @@
 Tópicos Especiales y Aplicaciones en Inteligencia Artificial — SI4006 
-# Entrega M1 - Fine-tuning baseline
+# Entrega M2 - Harness de Modelo
 ## Esteban Álvarez Zuluaga, Mateo Pineda Álvarez
 
 Sistema que toma la conversación entre un médico y su paciente y genera un borrador de la historia clínica, para ahorrarle tiempo de documentación al personal de salud.

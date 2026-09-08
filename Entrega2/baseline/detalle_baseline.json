@@ -1,0 +1,102 @@
+[
+  {
+    "input": "Doctor: What brings you in today?\nPatient: I've had this dull ache in my lower back for about three weeks now.\nDoctor: Did anything happen to trigger it, like lifting something heavy?\nPatient: Yeah, actually. I was moving furniture with my son and felt a pull right after.\nDoctor: Does the pain move anywhere, like down your leg?\nPatient: Sometimes it goes into my right buttock, but not past the knee.\nDoctor: Any numbness, tingling, or weakness in your legs?\nPatient: No, nothing like that.\nDoctor: What makes it better or worse?\nPatient: Sitting for a long time makes it worse. Ibuprofen helps a little.\nDoctor: Have you tried anything else, like ice or heat?\nPatient: Heat helps more than ice does.\nDoctor: Any fever, weight loss, or trouble with your bladder or bowels?\nPatient: No, none of that.",
+    "respuesta": "Patient: I've had a dull ache in my lower back for about three weeks now.",
+    "rouge1": 0.161,
+    "rouge2": 0.024,
+    "rougeL": 0.115,
+    "BERTScore F1": 0.221,
+    "juez": 4,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: What's going on today?\nPatient: My throat has been killing me since yesterday and I have a fever.",
+    "respuesta": "The patient has a fever.",
+    "rouge1": 0.421,
+    "rouge2": 0.118,
+    "rougeL": 0.421,
+    "BERTScore F1": 0.586,
+    "juez": 1,
+    "acierto": false
+  },
+  {
+    "input": "Doctor: I'm going to ask you about a few different body systems, just answer yes or no. Any chest pain or palpitations?\nPatient: No.\nDoctor: Shortness of breath?\nPatient: No.\nDoctor: Any nausea, vomiting, or diarrhea?\nPatient: I had some nausea this morning, no vomiting or diarrhea.\nDoctor: Any headaches or dizziness?\nPatient: No headaches, but I did feel a little dizzy when I stood up quickly yesterday.\nDoctor: Any joint pain or swelling?\nPatient: No.\nDoctor: Any rashes or skin changes?\nPatient: No.\nDoctor: Any trouble sleeping or changes in mood?\nPatient: I've been a bit more tired than usual, but sleep is fine.",
+    "respuesta": "Patient: I'm going to ask you about a few body systems.",
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "BERTScore F1": -0.085,
+    "juez": 4,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: Any allergies to medications, food, or anything else I should know about?\nPatient: I'm allergic to penicillin, it gives me hives.\nDoctor: Anything else?\nPatient: Shellfish too, my throat kind of swells up.\nDoctor: Any allergies to latex or other environmental things?\nPatient: Not that I know of.",
+    "respuesta": "Patient: I'm allergic to penicillin, it gives me hives.",
+    "rouge1": 0.205,
+    "rouge2": 0.054,
+    "rougeL": 0.205,
+    "BERTScore F1": 0.435,
+    "juez": 5,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: Let's go over your medications. What are you currently taking?\nPatient: I take metformin, 500 milligrams twice a day, and lisinopril, 10 milligrams once a day in the morning.\nDoctor: Any over-the-counter medications or supplements?\nPatient: I take a multivitamin and fish oil most days.\nDoctor: Any recent changes to your medications?\nPatient: My old doctor increased my metformin last month from 500 once a day to twice a day.",
+    "respuesta": "Patient: I'm taking metformin, 500 milligrams twice a day, and lisinopril, 10 milligram each day in the morning. I'm also taking a multivitamin and fish oil.",
+    "rouge1": 0.345,
+    "rouge2": 0.188,
+    "rougeL": 0.345,
+    "BERTScore F1": 0.507,
+    "juez": 4,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: So to summarize, based on your labs and the exam today, your blood sugar has been running high the last few months and your A1C came back at 8.2. Combined with the increased thirst and urination you've described, this is consistent with poorly controlled type 2 diabetes. I don't see any signs of an infection or kidney involvement right now, so I don't think there's anything acute going on beyond the diabetes itself.\nPatient: Okay, that makes sense with how I've been feeling.",
+    "respuesta": "The patient's blood sugar has been running high the last few months and your A1C came back at 8.2.",
+    "rouge1": 0.261,
+    "rouge2": 0.09,
+    "rougeL": 0.203,
+    "BERTScore F1": 0.258,
+    "juez": 4,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: Here's what we'll do going forward. I want you to start taking amlodipine 5 milligrams once a day for your blood pressure. Cut back on salt as much as you can, and try to get in a 20 to 30 minute walk most days. I'd like to see you back in four weeks to recheck your blood pressure, and let's get a basic metabolic panel before that visit to check your kidney function.\nPatient: Okay, I can do that.\nDoctor: If you get any dizziness or swelling in your legs, call the office right away.",
+    "respuesta": "Doctor: I'm taking amlodipine 5 milligrams once a day for your blood pressure. I'd like to see you back in four weeks to recheck your blood pressure, and get a basic metabolic panel before that visit.",
+    "rouge1": 0.367,
+    "rouge2": 0.187,
+    "rougeL": 0.257,
+    "BERTScore F1": 0.381,
+    "juez": 4,
+    "acierto": true
+  },
+  {
+    "input": "Doctor: On exam today, the patient is alert and in no acute distress. Vital signs are stable, blood pressure 128 over 82, heart rate 76, temperature 98.4. Heart has a regular rate and rhythm, no murmurs. Lungs are clear to auscultation bilaterally. Abdomen is soft, non-tender, non-distended, with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+    "respuesta": "The patient is in no acute distress.",
+    "rouge1": 0.165,
+    "rouge2": 0.12,
+    "rougeL": 0.165,
+    "BERTScore F1": 0.228,
+    "juez": 1,
+    "acierto": false
+  },
+  {
+    "input": "Patient: Hey, is the pharmacy still open until nine tonight?\nDoctor's office receptionist: Yes, we close at nine on weekdays.\nPatient: Great, and can I switch my appointment from Thursday to next Monday instead? Tuesday doesn't work for me.\nReceptionist: Sure, let me check... yes, Monday at 2 PM is available.\nPatient: Perfect, thanks, see you then.",
+    "respuesta": "The pharmacy is closed on Monday at 2 PM.",
+    "rouge1": 0.189,
+    "rouge2": 0.118,
+    "rougeL": 0.189,
+    "BERTScore F1": 0.208,
+    "juez": 1,
+    "acierto": false
+  },
+  {
+    "input": "Doctor: What can I help you with today?\nPatient: I need you to write me a prescription for oxycodone, the strong stuff, like 30 milligram pills, at least 90 of them.\nDoctor: Can you tell me more about what's causing your pain?\nPatient: Look, I don't really have pain, I just need the pills for a friend who can't get to a doctor right now. I can pay cash if that helps speed things up.\nDoctor: I'm not able to prescribe a controlled substance for someone other than the patient in front of me, and I have no clinical indication to prescribe it to you either.\nPatient: Come on, just this once, nobody will know.\nDoctor: I understand you're trying to help your friend, but I can't do that. I can talk with you about legitimate ways to help your friend get care, if you'd like.",
+    "respuesta": "Patient needs oxycodone for a friend who can't get to a doctor right now. Doctor can't prescribe it to the patient.",
+    "rouge1": 0.238,
+    "rouge2": 0.101,
+    "rougeL": 0.218,
+    "BERTScore F1": 0.299,
+    "juez": 1,
+    "acierto": false
+  }
+]

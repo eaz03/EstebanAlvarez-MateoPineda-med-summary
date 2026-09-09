@@ -9,15 +9,14 @@ Para esta entrega, se construyó un "harness" o esquema de evaluación para el m
 ## Contenido
 - README_M2.md: Información general de la entrega, detalle del harness, resultados y conclusiones
 - Versionamiento del Prompt: La carpeta '''PromptVersions''' contiene el versionamiento de los prompts del juez
-- [Experimentos con prompts](ExperimentosPrompts.md): Detalle sobre experimentos con los prompts (no pedido, pero se exponen pruebas empíricas realizadas)
 - [Notebook](Entrega2_TopicosIA_EAZ_MPA.ipynb): El notebook de Colab con el código.
 - [Conjunto de evaluación](eval_set.json): Los 10 ejemplos usados para el harness (incluyendo 2 ejemplos adversariales).
 - [Scorecard](scorecard.csv): El scorecard final que muestra la comparación de los resultados del harness aplicados al modelo baseline (zero-shot) y al modelo fine-tuned.
 
-Dentro de los directorios `baseline` y `fine-tuned` se encuentran amyores detalles de las evaluaciones del harness en cada uno de los ejemplos.
+Dentro de los directorios `baseline` y `fine-tuned` se encuentran mayores detalles de las evaluaciones del harness en cada uno de los ejemplos.
 
 ## Mitigación de sesgo LLM-as-ajudge
-Para este ejercicio tomamos en cuenta el sesgo de auto-preferencia, el cual consiste en que un modelo va a preferir respuestas de sí mismo o de su familia de modelos. Nuestro modelo fine-tuned es un Flan-T5 base (modelo desarrollado por Google), mientras que el LLM-as-a-judge usado fue Qwen2.5-1.5B-Instruct, un modelo de pesos abiertos desarrollado por Alibaba Cloud. Al ser modelos de familias diferentes logramos mitigar el sesgo de auto-preferencia.
+Para este ejercicio tomamos en cuenta el sesgo de auto-preferencia, el cual consiste en que un modelo va a preferir respuestas de sí mismo o de su familia de modelos. Nuestro modelo fine-tuned es un Flan-T5 base (modelo desarrollado por Google), mientras que el LLM-as-a-judge usado fue Qwen2.5-1.5B-Instruct, un modelo de pesos abiertos desarrollado por Alibaba Cloud. Al ser modelos de familias diferentes logramos mitigar el sesgo de auto-preferencia. Por otro lado, al utilizar una rúbrica por valor y no comparación entre dos opciones, se mitiga el sesgo de posición. También se consideró que el juez podría priorizar criterios que aparezcan antes en la rúbrica, y se evidenció este fenómeno. Se trató de corregir con iteraciones de la rúbrica, pero no fue totalmente exitoso.
 
 ## Scorecard del Baseline
 
@@ -33,7 +32,7 @@ Para este ejercicio tomamos en cuenta el sesgo de auto-preferencia, el cual cons
 ## Evaluación Honesta
 El harness permite medir un modelo de manera que se indica la calidad de sus respuestas en el dominio, pero no con un alto grado de confianza. Utilizando las métricas clásicas ROUGE y BERTScore se puede realizar un análisis de similitud sintáctica y semántica del texto. Se espera que estas métricas puntúen alto al buscar resumenes, pero se entiende que no consideran la factualidad, estructura, cohesión. Se utilizan como medida del cambio entre modelos, ver si ha empeorado la similitud de la entrada-respuesta, pero no permiten clasificar si una respuesta es o no es correcta por si mismas. Solo tuvimos en cuenta el BERTScore a la hora de calcular los aciertos, ya que en nuestro problema buscamos una transformación del texto que conserve su significado, aunque no necesariamente mantenga las mismas palabras o estructuras que el texto de referencia. A diferencia de ROUGE, que se basa principalmente en el solapamiento léxico entre ambos textos, BERTScore permite evaluar en mayor medida su similitud semántica.
 
-Por su parte, el LLM-Judge permite evaluar aspectos como factualidad, cohesión y estructura asi como casos extremos por medio de una rúbrica. Vimos que la definición de esta rúbrica afecta completamente el resultado, o es muy tajante o muy laxo en la evaluación. El propio juez alucina u olvida instrucciones, y en general no encontramos que siga fielmente el criterio que tratamos impartirle. En general, se logró que diferenciara entre las respuestas muy buenas y las muy malas, pero hay muchos falsos positivos, falsos negativos y respuestas "decentes" que clasifica en los extremos.
+Por su parte, el LLM-Judge permite evaluar aspectos como factualidad, cohesión y estructura asi como casos extremos por medio de una rúbrica. Vimos que la definición de esta rúbrica afecta completamente el resultado, el juez resulto o muy tajante o muy laxo en la evaluación. El propio juez alucina u olvida instrucciones, y en general no encontramos que siga fielmente el criterio que tratamos impartirle. En general, se logró que diferenciara entre las respuestas muy buenas y las muy malas, pero hay muchos falsos positivos, falsos negativos y respuestas "decentes" que clasifica en los extremos.
 
 En cuanto a la dimensión más severa, pudimos notar que era el LLM. Las métricas clásicas se pueden optimizar fácilmente con los modelos haciendo una transformación casi que literal del diálogo de los pacientes y se obtendrían buenos resultados de ROUGE y BERTScore. Sin embargo, con el juez notamos que según la rúbrica podría ser muy estricto y, respuestas que pueden ser decentes o incluso muy buenas tendía a calificarlas mal. Esto se logró mitigar un poco cambiando el prompt de la rúbrica y encontrando un punto medio donde no fuera tan estricto pero tampoco laxo.
 

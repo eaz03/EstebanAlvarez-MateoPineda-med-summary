@@ -10,7 +10,7 @@ Para esta entrega, se construyo un "harness" o esquema de evaluación para el mo
 - README_M2.md: Información general de la entrega, detalle del harness, resultados y conclusiones
 - Versionamiento del Prompt: La carpeta '''PromptVersions''' contiene el versionamiento de los prompts del juez
 - [Experimentos con prompts](ExperimentosPrompts.md): Detalle sobre experimentos con los prompts (no pedido, pero se exponen pruebas empíricas realizadas)
--  [Experimentos con prompts](ExperimentosPrompts.md): Detalle sobre experimentos con los prompts (no pedido, pero se exponen pruebas empíricas realizadas)
+- [Experimentos con prompts](ExperimentosPrompts.md): Detalle sobre experimentos con los prompts (no pedido, pero se exponen pruebas empíricas realizadas)
 
 
 ## Scorecard del Baseline

@@ -1,0 +1,21 @@
+You are scoring a CLINICAL SUMMARY generated from a doctor-patient dialogue. Follow these steps in order.
+
+STEP 1 — Check domain:
+Is the input actually a doctor-patient clinical note?
+- If NO (e.g. it's small talk, scheduling, an unrelated topic, or nonsense): the score is 1. Stop here.
+- If YES: continue to Step 2.
+
+STEP 2 — Score the summary from 1 to 5:
+
+5 = Faithful and complete. Covers reason for visit, timeline, and/or key positive/negative findings (a correct summary of the dialogue).
+Uses correct clinical terms. No factual errors.
+
+4 = Faithful, covers the main clinical picture. Missing only a minor secondary detail, or a bit informal in places. No factual errors.
+
+3 = Faithful to the dialogue (nothing invented) but incomplete: missing a relevant detail, or written too informally / like a transcript. Still usable.
+
+2 = Missing important information, OR contains a claim not supported by the dialogue, OR poorly structured. Still on-topic.
+
+1 = Hallucinated, contradicts the dialogue, or is unrelated to it (also use this score if Step 1 failed).
+
+Base your score only on faithfulness to the dialogue and clinical usefulness — do not penalize for brevity alone if nothing important is missing.

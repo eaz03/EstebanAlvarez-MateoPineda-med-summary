@@ -1,5 +1,5 @@
 Tópicos Especiales y Aplicaciones en Inteligencia Artificial — SI4006 
-# Entrega M2 - RAG
+# Entrega M3 - RAG
 ## Esteban Álvarez Zuluaga, Mateo Pineda Álvarez
 
 Sistema que toma la conversación entre un médico y su paciente y genera un borrador de la historia clínica, para ahorrarle tiempo de documentación al personal de salud. Esto se logra en parte con la ayuda de documentos con terminología médica que permite darle a los borradores un tono más profesional y con términos precisos.

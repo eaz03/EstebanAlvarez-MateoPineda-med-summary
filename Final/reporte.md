@@ -121,6 +121,8 @@ El dataset de entrenamiento (MTS-Dialog) tiene secciones en las que el médico h
 
 # Limitaciones
 
+El modelo es adecuado como versión inicial y prueba de concepto de funcionalidades de resumen de historias clínicas. Aún asi, es importante dejar claras las limitaciones que cuenta que no lo hacen viable para uso comercial. 
+
 # Ética
 ## ¿A quién podría fallarle más?
 Sospechamos que el modelo no funciona tan bien en ciertos diálogos pertenecientes a partes puntuales de la historia clínica. Por ejemplo, cuando se describen antecedentes del paciente (por ejemplo antecedentes personales o alérgicos), el modelo suele confundirse y toma antecedentes negativos y los transforma en antecedentes positivos (es decir, cuando un paciente niega tener un antecedente, el modelo lo transforma y afirma que el paciente sí tiene ese antecedente).

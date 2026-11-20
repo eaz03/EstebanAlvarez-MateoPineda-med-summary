@@ -27,9 +27,4 @@ uv sync                                   # instala dependencias
 cp .env.example .env                      # opcional: WANDB_API_KEY para ver las peticiones en W&B
 uv run uvicorn medsummary.api.main:app --host 127.0.0.1 --port 8000
 ```
-
-
-
-
-
-http://127.0.0.1:8000
+Abrir http://127.0.0.1:8000.

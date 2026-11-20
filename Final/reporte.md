@@ -25,7 +25,7 @@ El corpus del RAG es el libro "Medical Terminology, 2nd edition" (Open RN, licen
 Sobre el RAG ingenuo construimos un RAG avanzado con tres técnicas: descomposición de la consulta con un LLM para extraer cada expresión que debe traducirse a terminología médica (máximo 6 por nota), hybrid search que combina la búsqueda dense con BM25 mediante RRF, y un reranker que reordena los chunks recuperados (k=3 por término y score mínimo mayor a 0 para evitar reemplazos que no sean coherentes). El proceso completo de construcción del RAG se puede encontrar en [README_M3.md](../Entrega3/README_M3.md).
 
 ## Patrón visual
-Para este proyecto no se implementaron modelos visuales, debido a que el problema implica la conversión de conversaciones entre médicos y pacientes a resúmenes de historia clínica. Este proceso solo involucra texto y no requiere el uso de imágenes para llevar a cabo el objetivo y la resolución del problema. La implementación de un componente visual adicionalmente involucra modelos adicionales de peso elevado, y mayor procesamiento que empeoran la latencia y portabilidad del sistema. Se consideró mejor hacer un sistema más robusto que cumpla con sus necesidades clave de contexto, y las cumpla correctamente, a una adición que no añada tanto valor, y afecte los otros criterios de calidad.
+Para este proyecto no se implementaron modelos visuales, debido a que el problema implica la conversión de conversaciones entre médicos y pacientes a resúmenes de historia clínica. Este proceso solo involucra texto y no requiere el uso de imágenes para llevar a cabo el objetivo y la resolución del problema.
 
 ## Técnica de eficiencia
 Para la cuantización se empleó como técnica el GGUF usando llama-cpp. La razón para elegir GGUF en lugar de otras herramientas de cuantización como bitsandbytes es porque GGUF nos permite cuantizar y usar el modelo tanto en CPU como en GPU, lo cual representa una ventaja frente a los otros métodos de cuantización porque no teníamos claro inicialmente el entorno en el cual sería desplegado nuestro pipeline. Otros métodos exigen GPU e, incluso, algunos exigen que sea de la marca NVIDIA, lo cual representa una restricción grande a la hora de poder desplegar el código y, más aún, si a esto le sumamos que sea de manera gratuita.
@@ -92,6 +92,32 @@ Para la ablación tomamos dos elementos del RAG avanzado: el reranker y el hybri
 En conclusión, el reranker es el componente que más aporta al RAG avanzado: mejora el juez, el recall y la faithfulness, y reduce los reemplazos incorrectos. El hybrid search tiene un aporte marginal en nuestro corpus. Aun así, ninguna configuración del RAG supera al modelo sin RAG según el juez, lo cual es consistente con el problema ya identificado de que el RAG a veces reemplaza expresiones coloquiales por términos médicos incorrectos (como "pulmonary embolism"), error que se mantiene incluso en el sistema completo.
 
 # Análisis de errores
+Para el análisis de errores revisamos las notas generadas por cada sistema en los 10 ejemplos del harness, junto con las explicaciones del juez. Hay que tener en cuenta que todos los sistemas parten del mismo borrador generado por Flan-T5 con LoRA, por lo que los errores del borrador se heredan en todas las versiones, y el RAG solo puede agregar errores adicionales sobre él. Agrupamos los errores en cinco tipos:
+
+## 1. Omisión de información clínica relevante
+Aquí lo que falla es el modelo fine-tuneado (Flan-T5 + LoRA), que genera el borrador. Esto se puede ver en varios casos del eval_set, como en el ejemplo 0, el 1 y el 4.
+
+El modelo tiende a quedarse con la primera frase del diálogo y producir notas muy cortas. Para intentar arreglarlo, probaríamos primero un ajuste de los parámetros de generación y entrenar con más épocas o con un modelo más grande (Flan-T5-large), si los recursos lo permiten. También se podría agregar un paso de verificación que compare las entidades clínicas del diálogo (medicamentos, dosis, síntomas) con las de la nota y regenere si falta alguna. También sería una buena idea iterar con diferentes tipos de prompt para encontrar el que mejores resultados produzca.
+
+## 2. Conversión de antecedentes negativos a positivos y viceversa
+Aquí lo que falla principalmente es el modelo fine-tuneado y en algunos casos la reescritura del RAG (Qwen).m Se puede ver en ejemplos del eval_set como el 2 y el 3.
+
+Este es uno de los errores más graves para el usuario, porque una alergia o un síntoma inventado puede cambiar una decisión clínica. Para el borrador, agregaríamos al entrenamiento más ejemplos con antecedentes negados, y un post-procesamiento con un detector de negaciones que compare cada hallazgo entre el diálogo y la nota y verifique que realmente el antecedente es positivo o negativo. Para el RAG,se podría validar que las palabras de negación ("no", "denies") se mantengan y no sean reemplazadas al buscar en el corpus.
+
+## 3. Reemplazos incorrectos de terminología médica
+Lo que falla aquí es el RAG avanzado. Se puede observal en el eval_set en ejemplos como el 0, el 5 y el 7.
+
+El problema suele empezar en la descomposición, que extrae palabras que no son síntomas ("pull", "soft", "high", "8.2"). Podríamos intentar restringir el prompt de descomposición para que no extraiga números ni adjetivos sueltos. Adicionalmente, podríamos subir el umbral del reranker porque es muy permisivo (acepta chunks que tenga un puntaje mayor a 0), y no permitiríamos reemplazar valores numéricos.
+
+## 4. Diálogos fuera de alcance o con riesgo de seguridad
+La válvula de escape del modelo fine-tuneado a veces no es capaz de verificar si el diálogo está en un contexto clínico o no, por lo que depende de la válvula implementada en el RAG. Esto se puede ver en los ejemplos 8 y 9.
+
+Para arreglarlo, agregaríamos una válvula de escape más robusta desde el inicio del pipeline, es decir, desde el modelo fine-tuneado. SI se activa debería devuelver un mensaje en lugar de una nota. Para casos sensibles como solicitudes de sustancias controladas, agregaríamos ejemplos al entrenamiento en los que se documente explícitamente la decisión del médico ("No prescription was given"). El prompt del RAG ya indica que se devuelva el borrador sin cambios si no es una nota clínica, pero esto no es una medida robusta si el borrador ya viene mal.
+
+## 5. Errores de atribución y de forma
+Aquí falla el modelo fine-tuneado. El error de atribución se refiere a que el modelo pone las palabras de un sujeto como si las dijera otro (es decir, como si el médico dijera lo del paciente o viceversa). También ocurren errores en pronombres (por ejemplo usar segunda persona en vez de la tercera persona, que no corresponde al formato de historia clínica que se escribe en tercera persona). Esto se puede ver en los ejemplos 5, 6 y 7.
+
+El dataset de entrenamiento (MTS-Dialog) tiene secciones en las que el médico habla casi todo el tiempo (evaluación, plan, examen físico), y el modelo no aprende a convertirlas a tercera persona. Se podría intentar agregar un post-procesamiento que detecte pronombres de primera y segunda persona y regenere la nota usando la tercera persona del singular. También se podría intentar incluir en el entrenamiento más ejemplos de esas secciones. En las ocasiones donde el modelo se inventa el sexo del paciente se puede reemplazar por "the patient" cuando el diálogo no lo menciona.
 
 # Limitaciones
 

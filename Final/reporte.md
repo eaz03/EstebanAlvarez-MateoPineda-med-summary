@@ -121,7 +121,27 @@ El dataset de entrenamiento (MTS-Dialog) tiene secciones en las que el médico h
 
 # Limitaciones
 
-El modelo es adecuado como versión inicial y prueba de concepto de funcionalidades de resumen de historias clínicas. Aún asi, es importante dejar claras las limitaciones que cuenta que no lo hacen viable para uso comercial. 
+El modelo es adecuado como versión inicial y prueba de concepto de funcionalidades de resumen de historias clínicas. Aun así, es importante dejar claras las limitaciones que no lo hacen viable para uso comercial:
+
+1. **Diálogos cortos.** El sistema está diseñado para diálogos cortos, a diferencia de una conversación real entre paciente y médico, que puede durar muchos minutos. MTS-Dialog contiene fragmentos que corresponden a una sola sección de la historia clínica, no consultas completas.
+2. **Solo inglés.** El sistema está entrenado y probado exclusivamente en inglés.
+3. **Evaluación pequeña.** El sistema fue probado sobre solo 10 casos representativos (eval set). Con más casos, el comportamiento real se esclarecería.
+4. **El modelo ajustado omite información e incluye afirmaciones no respaldadas.** Esto se refleja en las rúbricas:
+   1. **Coverage:** entre 2.9 y 3.0 en todos los sistemas. El borrador de Flan-T5 omite hechos importantes (dosis, hallazgos negativos, partes del plan) y ninguna pieza posterior los recupera, por lo que una nota del sistema no prueba que algo no se haya dicho.
+   2. **Grounding:** 3.4 en el modelo ajustado. Algunas afirmaciones no están respaldadas por el diálogo.
+   3. **Form:** pasa de 2.0 (Flan-T5 base, que copia el diálogo) a 4.0 con el fine tuning. Es la dimensión que más mejoró.
+   4. **Aciertos de dominio:** solo 1 de 10 casos supera el umbral del harness (BERTScore ≥ 0.60 y juez final ≥ 4) en cualquiera de los sistemas. Se escogió intencionalmente un umbral alto, debido a lo delicado del contexto y la necesidad de calidad. 
+5. **Introducción de negaciones después del RAG** Al reemplazar expresiones coloquiales por términos del glosario:
+   - **Borra negaciones:** "No shortness of breath" pasó a "dyspnea", "No nausea" a "nausea" y, con Q4_K_M, "No joint pain or swelling" a "arthritis". Es el error más grave, porque presenta como positivo un síntoma que el paciente negó.
+   - **Elige términos que comparten palabras pero no significado:**
+     - "pull" pasó a "pulmonary embolism";
+     - "diabetic" pasó a "diabetic retinopathy";
+     - "no acute distress" pasó a "no acute coronary syndrome";
+     - "latex allergies" pasó a "contact dermatitis".
+   
+   Por eso el grounding baja de 3.4 (modelo ajustado) a 3.0 (RAG avanzado sin cuantizar), y la faithfulness de RAGAS es de solo 0.0 a 0.2 cuando el RAG cambia la nota.
+6. **No se abstiene ante entradas no clínicas.** Flan-T5 siempre produce una nota. Una conversación administrativa (horario de farmacia y cambio de cita) se convirtió en una "nota clínica" con forma 1/5, en vez de indicar que no hay información clínica. En una solicitud indebida de oxicodona para un tercero, la nota registra los hechos pero confunde quién dijo qué.
+7. **Herramienta de citas limitada.** Solo agenda si el diálogo expresa el plazo en semanas o meses (de 1 a 104 semanas o de 1 a 24 meses), y calcula la fecha desde el día en que se procesa, no desde la fecha de la consulta.
 
 # Ética
 ## ¿A quién podría fallarle más?

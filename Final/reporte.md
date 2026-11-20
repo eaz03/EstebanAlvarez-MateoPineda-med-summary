@@ -32,6 +32,13 @@ Para la cuantización se empleó como técnica el GGUF usando llama-cpp. La raz�
 
 La decisión de realizar la cuantización con int8 o int4 se redujo a las pruebas realizadas con ambas cuantizaciones. Si bien pudimos comprobar (como lo vimos en clase) que la diferencia de latencia entre int8 e int4 no es tan significativa como la que hay entre el modelo sin cuantizar e int8, elegimos quedarnos con int4 por varias razones. Los resultados del harness no fueron tan diferentes entre ambas cuantizaciones, lo que indica que con int4 la pérdida de calidad no es tan significativa como lo podría ser en otros escenarios. Inicialmente probamos el sistema con int8, el cual funcionaba adecuadamente (evidenciado en el harness); sin embargo, pudimos apreciar que con esta cuantización el agente no llamaba nunca la tool del RAG, sin importar el tipo de input que se le pasara. Al intentar los mismos ejemplos con int4, el agente sí pudo reconocer que debía llamar la tool del RAG cuando era pertinente y por este motivo decidimos elegir esta cuantización en lugar de int8.
 
+
+| Dispositivo | Versión | Juez final | BERTScore F1 | Aciertos | p50 (s) | p95 (s) | p50 RAG (s) | Memoria Qwen (GB) | VRAM extra (GB) | Memoria total (GB) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| mps | Antes: Qwen sin cuantizar (bfloat16) | 3.11 | 0.418 | 0.10 | 3.51 | 6.06 | 2.52 | 3.09 | – | 4.35 |
+| mps | Después: Qwen GGUF Q8_0 (~int8) | 3.30 | 0.410 | 0.10 | 3.06 | 4.72 | 2.04 | 1.89 | – | 3.16 |
+| mps | Después: Qwen GGUF Q4_K_M (~int4) | 3.30 | 0.397 | 0.10 | 2.52 | 4.41 | 1.54 | 1.12 | – | 2.38 |
+
 Considerando el trade-off entre eficiencia y precisión, contemplamos perder un  máximo de un 10% del desempeño medido por el harness, para bajar la latencia en al menos un 30%. No consideramos un valor más alto de desempeño, ya que preferimos sacrificar latencia sobre calidad, considerado el contexto médico en que se trabaja, donde prima la factualidad, exactitud, y no es fundamental la velocidad.
 
 # Tabla evolutiva

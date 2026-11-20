@@ -9,3 +9,27 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 - **Entrega 2:** carpeta con toda la información relativa a la entrega 2. Lo pedido por la entrega se encuentra en [README_M2](Entrega2/README_M2.md)
 - **Entrega 3:** carpeta con toda la información relativa a la entrega 3. Lo pedido por la entrega se encuentra en [README_M3](Entrega3/README_M3.md)
 - **Final:** carpeta con toda la información relativa a la entrega final. Lo pedido por la entrega se encuentra en [reporte.md](Final/reporte.md)
+
+## Demo desplegada y WandB
+
+**Link de despliegue:** Se utilizó un tunel de Cloudflared local para el despliegue, por lo que la url cambia cada vez que se despliega.
+
+**Link de Weights and Biases:**
+
+## Instrucciones de ejecución
+
+Se requiere Python 3.12 o superior y [uv](https://docs.astral.sh/uv/).
+
+Para correr el sistema localmente, desde la carpeta Final:
+
+```bash
+uv sync                                   # instala dependencias
+cp .env.example .env                      # opcional: WANDB_API_KEY para ver las peticiones en W&B
+uv run uvicorn medsummary.api.main:app --host 127.0.0.1 --port 8000
+```
+
+
+
+
+
+http://127.0.0.1:8000

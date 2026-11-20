@@ -96,7 +96,7 @@ El peor daño que se puede cometer es que la nota clínica generada tenga imprec
 
 # Uso de IA
 
-Durante el desarrollo de esta entrega se usó Claude (Anthropic, 2026), en su versión Opus 5.5, como asistente de generación de código bajo supervisión humana y como apoyo para la adquisición de información.El análisis de resultados, las decisiones técnicas y las conclusiones del reporte son del equipo.
+Durante el desarrollo de esta entrega se usó Claude (Anthropic, 2026), en su versión Opus 5.5, como asistente de generación de código bajo supervisión humana y como apoyo para la adquisición de información para toma de decisiones. El análisis de resultados, las decisiones técnicas y las conclusiones del reporte son del equipo.
 
 ## Referencias
 

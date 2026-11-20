@@ -95,3 +95,57 @@ El peor daño que se puede cometer es que la nota clínica generada tenga imprec
 # Quién hizo qué
 
 # Uso de IA
+
+Durante el desarrollo de esta entrega se usó Claude (Anthropic, 2026), en su versión Opus 5.5, como asistente de generación de código bajo supervisión humana y como apoyo para la adquisición de información. En el código, la herramienta apoyó la reorganización del notebook en un paquete de clases (`src/medsummary`), el script de regeneración de tablas (`scripts/generar_tablas.py`), las pruebas automatizadas, la clase `Pipeline`, la API desplegada con su health check, el logging estructurado en JSON, la integración con Weights & Biases y las medidas de seguridad para la exposición pública mediante Cloudflare Tunnel. El equipo definió la arquitectura, las convenciones de nombres y el criterio de simplicidad; revisó cada cambio, descartó propuestas sobrediseñadas y exigió que la lógica replicara la del notebook original. Además, ejecutó todo el sistema localmente y verificó que las tablas regeneradas coincidieran con las obtenidas en Colab. En la adquisición de información, la herramienta se usó para comparar alternativas de despliegue (Hugging Face Spaces, Modal, Cloudflare Tunnel y Tailscale Funnel), revisar consideraciones de seguridad y localizar referencias bibliográficas, que el equipo contrastó con las fuentes primarias (documentación oficial, model cards, ACL Anthology y arXiv). El análisis de resultados, las decisiones técnicas y las conclusiones del reporte son del equipo. Los modelos que forman parte del sistema (Flan-T5, Qwen2.5 y Flow-Judge) se citan en las referencias y no en esta sección. [Completar si se usaron otras herramientas en las entregas anteriores.]
+
+## Referencias
+
+Abdin, M., Aneja, J., Awadalla, H., Awadallah, A., Awan, A. A., Bach, N., ... Zhou, X. (2024). *Phi-3 technical report: A highly capable language model locally on your phone* (arXiv:2404.14219). arXiv. https://doi.org/10.48550/arXiv.2404.14219
+
+Anthropic. (2026). *Claude* (versión Opus 5.5) [Modelo de lenguaje grande]. https://claude.ai
+
+Ben Abacha, A., Yim, W., Fan, Y. y Lin, T. (2023). An empirical study of clinical note generation from doctor-patient encounters. En *Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics* (pp. 2291–2302). Association for Computational Linguistics. https://doi.org/10.18653/v1/2023.eacl-main.168
+
+Biewald, L. (2020). *Experiment tracking with Weights and Biases* [Software]. https://wandb.ai
+
+Chung, H. W., Hou, L., Longpre, S., Zoph, B., Tay, Y., Fedus, W., ... Wei, J. (2024). Scaling instruction-finetuned language models. *Journal of Machine Learning Research, 25*(70), 1–53. https://jmlr.org/papers/v25/23-0870.html
+
+Cloudflare. (s. f.). *Cloudflare Tunnel* [Software]. https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
+
+Cormack, G. V., Clarke, C. L. A. y Büttcher, S. (2009). Reciprocal rank fusion outperforms Condorcet and individual rank learning methods. En *Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval* (pp. 758–759). ACM. https://doi.org/10.1145/1571941.1572114
+
+Ernstmeyer, K. y Christman, E. (Eds.). (2024). *Medical terminology* (2.ª ed.). Open RN | WisTech Open; Chippewa Valley Technical College. https://wtcs.pressbooks.pub/medterm/
+
+Es, S., James, J., Espinosa-Anke, L. y Schockaert, S. (2024). RAGAs: Automated evaluation of retrieval augmented generation. En *Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations* (pp. 150–158). Association for Computational Linguistics. https://aclanthology.org/2024.eacl-demo.16
+
+Flow AI. (2024). *Flow-Judge-v0.1* [Modelo de lenguaje]. Hugging Face. https://huggingface.co/flowaicom/Flow-Judge-v0.1
+
+Gerganov, G. y colaboradores. (s. f.). *llama.cpp* [Software]. GitHub. https://github.com/ggml-org/llama.cpp
+
+Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L. y Chen, W. (2022). LoRA: Low-rank adaptation of large language models. En *International Conference on Learning Representations (ICLR 2022)*. https://doi.org/10.48550/arXiv.2106.09685
+
+Lin, C.-Y. (2004). ROUGE: A package for automatic evaluation of summaries. En *Text Summarization Branches Out* (pp. 74–81). Association for Computational Linguistics. https://aclanthology.org/W04-1013
+
+Mangrulkar, S., Gugger, S., Debut, L., Belkada, Y., Paul, S. y Bossan, B. (2022). *PEFT: State-of-the-art parameter-efficient fine-tuning methods* [Software]. GitHub. https://github.com/huggingface/peft
+
+Nguyen, T., Rosenberg, M., Song, X., Gao, J., Tiwary, S., Majumder, R. y Deng, L. (2016). *MS MARCO: A human generated machine reading comprehension dataset* (arXiv:1611.09268). arXiv. https://doi.org/10.48550/arXiv.1611.09268
+
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., ... Chintala, S. (2019). PyTorch: An imperative style, high-performance deep learning library. En *Advances in Neural Information Processing Systems 32* (pp. 8024–8035). Curran Associates.
+
+Qwen Team. (2024). *Qwen2.5 technical report* (arXiv:2412.15115). arXiv. https://doi.org/10.48550/arXiv.2412.15115
+
+Ramírez, S. (s. f.). *FastAPI* [Software]. https://fastapi.tiangolo.com
+
+Reimers, N. y Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. En *Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing* (pp. 3982–3992). Association for Computational Linguistics. https://doi.org/10.18653/v1/D19-1410
+
+Robertson, S. y Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond. *Foundations and Trends in Information Retrieval, 3*(4), 333–389. https://doi.org/10.1561/1500000019
+
+Wang, W., Wei, F., Dong, L., Bao, H., Yang, N. y Zhou, M. (2020). MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers. En *Advances in Neural Information Processing Systems 33* (pp. 5776–5788). Curran Associates.
+
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., ... Rush, A. M. (2020). Transformers: State-of-the-art natural language processing. En *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations* (pp. 38–45). Association for Computational Linguistics. https://doi.org/10.18653/v1/2020.emnlp-demos.6
+
+Xiao, S., Liu, Z., Zhang, P., Muennighoff, N., Lian, D. y Nie, J.-Y. (2024). C-Pack: Packed resources for general Chinese embeddings. En *Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval* (pp. 641–649). ACM. https://doi.org/10.1145/3626772.3657878
+
+Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q. y Artzi, Y. (2020). BERTScore: Evaluating text generation with BERT. En *International Conference on Learning Representations (ICLR 2020)*. https://doi.org/10.48550/arXiv.1904.09675
+
+Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang, H., Gonzalez, J. E. y Stoica, I. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. En *Advances in Neural Information Processing Systems 36: Datasets and Benchmarks Track*. https://doi.org/10.48550/arXiv.2306.05685

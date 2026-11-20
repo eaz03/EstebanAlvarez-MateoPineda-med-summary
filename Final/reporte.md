@@ -113,6 +113,8 @@ El peor daño que se puede cometer es que la nota clínica generada tenga imprec
 # Quién hizo qué
 
 **Esteban:** Refactorización del notebook a proyecto desplegable en FastAPI basado en clases, consolidación de los avances de Mateo al proyecto desplegable, evaluación y realización del despliegue.
+
+
 **Mateo:** Implementación de la cuantización, tablas de comparación, página de despliegue
 
 # Uso de IA

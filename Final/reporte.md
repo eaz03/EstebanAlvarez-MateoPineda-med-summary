@@ -34,6 +34,13 @@ La decisión de realizar la cuantización con int8 o int4 se redujo a las prueba
 
 # Tabla evolutiva
 
+Según la tabla evolutiva podemos ver la evolución del sistema evaluado con el mismo harness, y con cada modificación. Se midió desde el modelo con fine-tuning, modelo con RAG ingenuo, RAG avanzado, y finalmente el modelo cuantizado desplegado. Se puede observar lo siguiente:
+
+- Métricas clásicas: Se tomaron las métricas Rouge y BERT. Se evidencia una mejora en las métricas al utilizar el RAG ingenuo, pero se evidencia una ligera baja de las métricas para el RAG avanzado. Como estas métricas se basan exclusivamente en similitud sintactica, y el RAG tiene como objetivo una paráfrasis semántica a términos médicos, es de esperar que no se parezca exactamente a la nota inicial, pero mantenga el significado. Como tal, aunque no permite concluirlo, se puede conjeturar que el "empeoramiento" de las métricas clasicas, indicando diferencia sintáctica, refleja realmente una paráfrasis  (sin poder determinar si fue buena o mala, solo que ya no se parecen tanto, lo cual es de esperar). 
+
+- 
+
+
 # Ablación
 
 # Análisis de errores

@@ -1,0 +1,23 @@
+# RAGAS with Flow-Judge, binary 0/1 (notebook cells 84-85).
+rubricas:
+  context_recall:
+    criterio: Do the retrieved passages give a medical term for every everyday expression in the clinical draft that needs one? Words that are already medical terms do not need one.
+    rubrica: |-
+      - Score 0: At least one everyday expression in the draft has no matching medical term in the passages.
+      - Score 1: Every everyday expression in the draft has a matching term in the passages, or the draft has no everyday expressions.
+  context_precision:
+    criterio: Does the passage give a medical term that means the same as an everyday expression in the clinical draft?
+    rubrica: |-
+      - Score 0: The passage has no such term, or its terms mean something different.
+      - Score 1: The passage has such a term with a matching definition.
+  faithfulness:
+    criterio: Is everything in the rewritten note supported by the original note or by the retrieved passages? A new medical term counts as supported only if it appears in the passages.
+    rubrica: |-
+      - Score 0: The rewritten note adds a fact or a medical term that is not in the original note or in the passages.
+      - Score 1: Everything in the rewritten note comes from the original note or from the passages.
+  answer_relevancy:
+    criterio: Does each new medical term in the rewritten note mean exactly the same as the words it replaced in the original note?
+    rubrica: |-
+      - Score 0: At least one new term means something different, broader or narrower than the words it replaced.
+      - Score 1: Every new term means the same as the words it replaced.
+reintento: Your answer was not valid ([ERROR]). Write the feedback inside <feedback></feedback> tags, then 0 or 1 inside <score></score> tags.

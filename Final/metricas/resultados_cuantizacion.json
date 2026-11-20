@@ -1,0 +1,433 @@
+{
+  "mps_sin_cuantizar": {
+    "dispositivo": "mps",
+    "variante": "sin_cuantizar",
+    "filas": [
+      {
+        "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pulmonary embolism right after. He has no anesthesia, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, hyperthyroidism, or trouble with his bladder or bowels.",
+        "borrador": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+        "chunks": [
+          "A pulmonary embolism (PULL-muh-nair-ee EM-boh-liz-uhm) (PE) is a blood clot or other substance, such as fat or an air bubble, that has traveled through the bloodstream and lodged in a smaller vessel within the pulmonary circulation in the lungs and obstructed blood flow. This blockage causes lack",
+          "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+          "Sudden numbness or weakness of an arm or leg, especially on one side of the body",
+          "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+          "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+          "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+          "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent",
+          "Hyperthyroidism (hī-pĕr-THĪ-rŏid-ĭzm): A condition characterized by excessive production of thyroid hormones by the thyroid gland, leading to symptoms like weight loss, increased heart rate, and anxiety. (Chapter 17.6)",
+          "Hyperemesis gravidarum (HĪ-pĕr-ĕm-Ē-sĭs GRAV-ĭ-dar-ŭm): A severe form of nausea and vomiting in pregnancy that can lead to dehydration and weight loss. (Chapter 8.5)"
+        ],
+        "segundos_rag": 4.771826958007296,
+        "segundos": 5.947529583005235
+      },
+      {
+        "nota": "The patient has a fever since yesterday.",
+        "borrador": "The patient has a fever since yesterday.",
+        "chunks": [
+          "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+          "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+          "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent"
+        ],
+        "segundos_rag": 0.832629333002842,
+        "segundos": 1.0449556240055244
+      },
+      {
+        "nota": "No angina or palpitations. dyspnea. nausea, vomiting, or diarrhea. No headache or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+        "borrador": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+        "chunks": [
+          "Angina (an-JĪ-nă): Chest pain caused by reduced blood flow to the heart muscle, often associated with coronary artery disease. (Chapter 9.6)",
+          "Coronary artery disease (KOR-ŏ-nā-rē AR-tĕr-ē dĭ-ZĒZ) (CAD) occurs when atherosclerosis (i.e., buildup of plaque) in the coronary arteries obstructs the flow of oxygenated blood to the heart muscle. As oxygenated blood flow to the cardiac muscle cells is reduced, referred to as ischemia (ĭs-KEE-mē-ă), individuals often experience chest pain called angina (an-JĪ-nă). See Figure",
+          "diaphoresis (dī-ă-fŏ-RĒ-sĭs). For example, a significant symptom of a heart attack, in addition to chest pain, is diaphoresis.",
+          "Dyspnea (shortness of breath)",
+          "Dyspnea (dĭsp-NĒ-ă): Shortness of breath",
+          "Dyspnea (shortness of breath), especially during physical activities",
+          "Nausea (NAW-zē-ă): The feeling of an urge to vomit.",
+          "Nausea (NAW-zē-ă): A feeling of sickness with an inclination to vomit. (Chapter 12.5)",
+          "Slight body aches or a mild headache",
+          "by patients as the worst headache they have ever felt. Transient ischemic attacks (trăn-zhĕnt ĭs-kē-mĭk ă-tăks) (TIAs) are temporary periods of symptoms similar to a stroke, but irreversible damage to the brain cells do not occur. However, TIAs are considered warning signs of an",
+          "A rash is an area of redness and small spots appearing on the skin due to allergy or illness. There are different types of rashes that may occur, each with different appearances and causes. Terms used to describe rashes include the following:"
+        ],
+        "segundos_rag": 5.268953332997626,
+        "segundos": 6.145823583006859
+      },
+      {
+        "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+        "borrador": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+        "chunks": [],
+        "segundos_rag": 0.6634687500045402,
+        "segundos": 0.996123417004128
+      },
+      {
+        "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "borrador": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "chunks": [],
+        "segundos_rag": 1.526548540990916,
+        "segundos": 2.5642999569827225
+      },
+      {
+        "nota": "The patient is a diabetic retinopathy with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his hemoglobin A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "borrador": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "chunks": [
+          "Diabetic retinopathy (ret-ĭn-OP-ă-thē): A complication of diabetes mellitus causing fluid leakage from blood vessels in the retina, leading to vision impairment. (Chapter 15.5)",
+          "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+          "Diabetic Retinopathy Diabetic retinopathy (ret-ĭn-OP-ă-thē) is a complication caused by diabetes mellitus. Fluid leakage from blood vessels causes the retinal tissue to swell, resulting in cloudy or blurred vision. If left untreated, diabetic retinopathy can cause blindness. There are various treatments for diabetic retinopathy, such as laser surgery to seal leaking blood vessels or the injection of medications into the eye to decrease inflammation. People with advanced cases of diabetic retinopathy may require surgery to remove and replace the gel-like fluid in the back of the eye, called the vitreous humor. Surgery may also be needed to repair a retinal detachment, a separation of the light-receiving",
+          "Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): Assesses an individual’s average blood glucose levels over the preceding two to three months. HbA1C is a form of hemoglobin. When glucose is in the bloodstream, it attaches to hemoglobin, forming glycated hemoglobin. The normal range for HbA1C is typically less than 5.7%.",
+          "Grave’s disease (GRĀVZ dĭ-ZĒZ): An autoimmune disorder that is the most common cause of hyperthyroidism, where the immune system attacks the thyroid gland causing it to produce too much thyroid hormone. (Chapter 17.6) Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): A blood test that indicates the average level of blood sugar over the past two to three months, used to diagnose and manage diabetes. (Chapter 17.6)",
+          "White blood cells: A sign of infection or inflammation.",
+          "An infection (in-FEK-shŏn) is caused by the invasion and multiplication of microorganisms in the body, such as bacteria (bak-TĒR-ē-a), viruses, fungi, and parasites. Microorganisms that cause infection are referred to as pathogens (path-Ŏ-jĕns).",
+          "Acute coronary syndrome (ə-KYŪT KOR-ŏ-nā-rē SĬN-drōm) (ACS): A term used to describe a range of conditions associated with sudden, reduced blood flow to the heart, including myocardial infarction. (Chapter 9.6)",
+          "Acute kidney failure (ā-kūt kĭd-nē fāl-yŭr) is the rapid (less than two days) loss of kidney function. There are many possible causes of acute kidney failure. 1: They include the following",
+          "Acute phase: Six to 12 hours after childbirth"
+        ],
+        "segundos_rag": 3.8371775830019033,
+        "segundos": 4.868245040997863
+      },
+      {
+        "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "borrador": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "chunks": [
+          "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+          "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+          "Low blood pressure, called hypotension (hī-pō-TEN-shŏn), has several causes, such as dehydration, vomiting, diarrhea, or medications used to treat hypertension. Treatment for hypotension typically includes fluid replacement. High blood pressure is called hypertension (hī-pĕr-TEN-shŏn) (HTN). Hypertension has a variety of causes, with risk factors such as obesity, lack of exercise, smoking, high salt diet, diabetes, and kidney disease."
+        ],
+        "segundos_rag": 2.8545360830030404,
+        "segundos": 3.8450556239986327
+      },
+      {
+        "nota": "The patient is a male with no acute distress. He has a blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a malacia, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "borrador": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "chunks": [
+          "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+          "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+          "Hypotension (hī-pō-TĔN-shŭn): Abnormally low blood pressure. (Chapter 17.6)",
+          "more accurate measurement than the pulse. Abnormal heart rates are referred to as bradycardia and tachycardia. Bradycardia (brād-i-KARD-ē-ă) refers to a slow heart rate, less than 60 bpm in an adult. Tachycardia (tak-ē-KARD-ē-ă) refers to a fast heart rate, greater than",
+          "Heart Rate Heart rate (HART RĀT) (HR) is the number of heart beats per minute (bpm). HR can vary considerably among people based on their age, as well as their fitness level. For an adult, normal resting HR is 60–100 bpm. Although similar to the pulse, the heart rate is auscultated directly using a stethoscope and is a",
+          "Bradycardia (brad-ē-KAR-dē-ă) refers to a slow resting heart rate of less than 60 beats per minute. A normal resting heart rate for an adult is 60 to 100 beats per minute (bpm). However, heart rates can vary widely among individuals based on several factors like age, fitness level, overall health, and medication side effects. Physically fit athletes may have a heart rate of 50 to 60 bpm at rest with no symptoms. However, individuals with bradycardia whose heart is not pumping enough blood to sufficiently supply the brain and body tissues with oxygen may have symptoms, such as feeling tired, dizzy, short of breath, or confused. Individuals with symptomatic bradycardia may experience syncope (SING-kŏ-pē), a medical term for a brief lapse in consciousness, commonly referred to as fainting. Bradycardia is a common side effect of many cardiac medications and can also be caused by several cardiac diseases and disorders. Treatment of symptomatic bradycardia includes medications to increase heart rate or surgical implantation of a pacemaker in the heart to maintain a normal heart rate.",
+          "-malacia: Softening",
+          "-malacia: Softening",
+          "-malacia: Softening"
+        ],
+        "segundos_rag": 4.215096917003393,
+        "segundos": 5.67081891700218
+      },
+      {
+        "nota": "The pharmacy is compound until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "borrador": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "chunks": [
+          "Open or compound (ō-pĕn ōr kŏm-pound frăk-chŭr): Bone is broken and pierces through the skin",
+          "OPEN RESOURCES FOR NURSING (OPEN RN)",
+          "-stomy: Artificial surgical opening"
+        ],
+        "segundos_rag": 1.9816137500019977,
+        "segundos": 2.5398140420002164
+      },
+      {
+        "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "borrador": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "chunks": [],
+        "segundos_rag": 2.1930347080051433,
+        "segundos": 3.1682889580115443
+      }
+    ],
+    "memoria_qwen_gb": 3.08742912,
+    "vram_extra_gb": null,
+    "memoria_otras_piezas_gb": 1.2607482920000002,
+    "formato": "torch.bfloat16",
+    "segundos_borrador": [
+      1.175702624997939,
+      0.2123262910026824,
+      0.8768702500092331,
+      0.3326546669995878,
+      1.0377514159918064,
+      1.0310674579959596,
+      0.9905195409955923,
+      1.4557219999987865,
+      0.5582002919982187,
+      0.975254250006401
+    ],
+    "maquina": "arm64 | 12 hilos | mps"
+  },
+  "mps_q8_0": {
+    "dispositivo": "mps",
+    "variante": "q8_0",
+    "filas": [
+      {
+        "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no anesthesia, paresthesia, or asthenia in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+        "borrador": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+        "chunks": [
+          "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+          "Sudden numbness or weakness of an arm or leg, especially on one side of the body",
+          "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+          "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+          "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+          "-asthenia: Weakness",
+          "-asthenia: Weakness",
+          "Myasthenia (mī-ăs-THĒ-nē-ă): Muscle weakness"
+        ],
+        "segundos_rag": 3.4331427910074126,
+        "segundos": 4.608845416005352
+      },
+      {
+        "nota": "The patient has a fever since yesterday.",
+        "borrador": "The patient has a fever since yesterday.",
+        "chunks": [
+          "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+          "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+          "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent"
+        ],
+        "segundos_rag": 0.6811152089940151,
+        "segundos": 0.8934414999966975
+      },
+      {
+        "nota": "No angina or palpitations. dyspnea. NAUSEA, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+        "borrador": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+        "chunks": [
+          "Angina (an-JĪ-nă): Chest pain caused by reduced blood flow to the heart muscle, often associated with coronary artery disease. (Chapter 9.6)",
+          "Coronary artery disease (KOR-ŏ-nā-rē AR-tĕr-ē dĭ-ZĒZ) (CAD) occurs when atherosclerosis (i.e., buildup of plaque) in the coronary arteries obstructs the flow of oxygenated blood to the heart muscle. As oxygenated blood flow to the cardiac muscle cells is reduced, referred to as ischemia (ĭs-KEE-mē-ă), individuals often experience chest pain called angina (an-JĪ-nă). See Figure",
+          "diaphoresis (dī-ă-fŏ-RĒ-sĭs). For example, a significant symptom of a heart attack, in addition to chest pain, is diaphoresis.",
+          "Dyspnea (shortness of breath)",
+          "Dyspnea (dĭsp-NĒ-ă): Shortness of breath",
+          "Dyspnea (shortness of breath), especially during physical activities",
+          "Nausea (NAW-zē-ă): The feeling of an urge to vomit.",
+          "Nausea (NAW-zē-ă): A feeling of sickness with an inclination to vomit. (Chapter 12.5)",
+          "Arthritis (är-THRĪ-tĭs): A general term for conditions affecting the joints and surrounding tissues, leading to pain, swelling, stiffness, and limited movement. It includes various types such as osteoarthritis and rheumatoid arthritis. (Chapter 13.6)",
+          "A rash is an area of redness and small spots appearing on the skin due to allergy or illness. There are different types of rashes that may occur, each with different appearances and causes. Terms used to describe rashes include the following:"
+        ],
+        "segundos_rag": 3.5630082079878775,
+        "segundos": 4.439878457997111
+      },
+      {
+        "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+        "borrador": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+        "chunks": [],
+        "segundos_rag": 0.4596156250045169,
+        "segundos": 0.7922702920041047
+      },
+      {
+        "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "borrador": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "chunks": [],
+        "segundos_rag": 2.2332104590022936,
+        "segundos": 3.2709618749941
+      },
+      {
+        "nota": "The patient is a diabetic retinopathy with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his hemoglobin A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "borrador": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "chunks": [
+          "Diabetic retinopathy (ret-ĭn-OP-ă-thē): A complication of diabetes mellitus causing fluid leakage from blood vessels in the retina, leading to vision impairment. (Chapter 15.5)",
+          "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+          "Diabetic Retinopathy Diabetic retinopathy (ret-ĭn-OP-ă-thē) is a complication caused by diabetes mellitus. Fluid leakage from blood vessels causes the retinal tissue to swell, resulting in cloudy or blurred vision. If left untreated, diabetic retinopathy can cause blindness. There are various treatments for diabetic retinopathy, such as laser surgery to seal leaking blood vessels or the injection of medications into the eye to decrease inflammation. People with advanced cases of diabetic retinopathy may require surgery to remove and replace the gel-like fluid in the back of the eye, called the vitreous humor. Surgery may also be needed to repair a retinal detachment, a separation of the light-receiving",
+          "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+          "Gestational diabetes (jĕs-TĀ-shŭn-ăl dī-ă-BĒ-tēz): A form of diabetes that manifests during pregnancy, involving elevated blood glucose levels, and generally resolves after the baby’s birth, although it can increase the risk of developing type 2 diabetes later in life. (Chapter 17.6)",
+          "be making enough insulin to maintain blood glucose levels within normal range. Gestational diabetes (jĕs-TĀ-shŭn-ăl dī-ă-BĒ-tēz) refers to a type of diabetes that develops during pregnancy. Gestational diabetes typically goes away after the baby is born, but it increases the risk of the mother for developing type 2 diabetes later in life. Common symptoms of untreated diabetes are:",
+          "Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): Assesses an individual’s average blood glucose levels over the preceding two to three months. HbA1C is a form of hemoglobin. When glucose is in the bloodstream, it attaches to hemoglobin, forming glycated hemoglobin. The normal range for HbA1C is typically less than 5.7%.",
+          "Grave’s disease (GRĀVZ dĭ-ZĒZ): An autoimmune disorder that is the most common cause of hyperthyroidism, where the immune system attacks the thyroid gland causing it to produce too much thyroid hormone. (Chapter 17.6) Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): A blood test that indicates the average level of blood sugar over the past two to three months, used to diagnose and manage diabetes. (Chapter 17.6)",
+          "8.2 Word Components Related to Obstetrics",
+          "8.2 Word Components Related to Obstetrics | 397",
+          "8.2 Word Components Related to Obstetrics 395",
+          "White blood cells: A sign of infection or inflammation.",
+          "An infection (in-FEK-shŏn) is caused by the invasion and multiplication of microorganisms in the body, such as bacteria (bak-TĒR-ē-a), viruses, fungi, and parasites. Microorganisms that cause infection are referred to as pathogens (path-Ŏ-jĕns)."
+        ],
+        "segundos_rag": 3.6546974170050817,
+        "segundos": 4.685764875001041
+      },
+      {
+        "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "borrador": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "chunks": [
+          "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+          "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+          "Low blood pressure, called hypotension (hī-pō-TEN-shŏn), has several causes, such as dehydration, vomiting, diarrhea, or medications used to treat hypertension. Treatment for hypotension typically includes fluid replacement. High blood pressure is called hypertension (hī-pĕr-TEN-shŏn) (HTN). Hypertension has a variety of causes, with risk factors such as obesity, lack of exercise, smoking, high salt diet, diabetes, and kidney disease."
+        ],
+        "segundos_rag": 1.8531296669971198,
+        "segundos": 2.843649207992712
+      },
+      {
+        "nota": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a distended with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "borrador": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "chunks": [
+          "Use terms related to the male reproductive system",
+          "Swollen, distended abdomen",
+          "Distended (dĭs-TĔN-dĕd): Stretched out or enlarged, often used to describe the bladder or abdomen when filled with fluid or gas. (Chapter 5.4)"
+        ],
+        "segundos_rag": 3.284360124991508,
+        "segundos": 4.740082124990295
+      },
+      {
+        "nota": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "borrador": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "chunks": [],
+        "segundos_rag": 1.2838119590014685,
+        "segundos": 1.8420122509996872
+      },
+      {
+        "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "borrador": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "chunks": [],
+        "segundos_rag": 1.6121994999994058,
+        "segundos": 2.587453750005807
+      }
+    ],
+    "memoria_qwen_gb": 1.894532128,
+    "vram_extra_gb": null,
+    "memoria_otras_piezas_gb": 1.2607482920000002,
+    "formato": "q8_0",
+    "segundos_borrador": [
+      1.175702624997939,
+      0.2123262910026824,
+      0.8768702500092331,
+      0.3326546669995878,
+      1.0377514159918064,
+      1.0310674579959596,
+      0.9905195409955923,
+      1.4557219999987865,
+      0.5582002919982187,
+      0.975254250006401
+    ],
+    "maquina": "arm64 | 12 hilos | mps"
+  },
+  "mps_q4_k_m": {
+    "dispositivo": "mps",
+    "variante": "q4_k_m",
+    "filas": [
+      {
+        "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no anesthesia, paresthesia, or asthenia in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+        "borrador": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+        "chunks": [
+          "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+          "Sudden numbness or weakness of an arm or leg, especially on one side of the body",
+          "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+          "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+          "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+          "-asthenia: Weakness",
+          "-asthenia: Weakness",
+          "Myasthenia (mī-ăs-THĒ-nē-ă): Muscle weakness"
+        ],
+        "segundos_rag": 2.891396834005718,
+        "segundos": 4.067099459003657
+      },
+      {
+        "nota": "The patient has a fever since yesterday.",
+        "borrador": "The patient has a fever since yesterday.",
+        "chunks": [
+          "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+          "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+          "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent"
+        ],
+        "segundos_rag": 0.6547695420013042,
+        "segundos": 0.8670958330039866
+      },
+      {
+        "nota": "No angina or palpitations. dyspnea. nausea. No headaches or dizziness. arthritis. No rashes or skin changes. No changes in mood.",
+        "borrador": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+        "chunks": [
+          "Angina (an-JĪ-nă): Chest pain caused by reduced blood flow to the heart muscle, often associated with coronary artery disease. (Chapter 9.6)",
+          "Coronary artery disease (KOR-ŏ-nā-rē AR-tĕr-ē dĭ-ZĒZ) (CAD) occurs when atherosclerosis (i.e., buildup of plaque) in the coronary arteries obstructs the flow of oxygenated blood to the heart muscle. As oxygenated blood flow to the cardiac muscle cells is reduced, referred to as ischemia (ĭs-KEE-mē-ă), individuals often experience chest pain called angina (an-JĪ-nă). See Figure",
+          "diaphoresis (dī-ă-fŏ-RĒ-sĭs). For example, a significant symptom of a heart attack, in addition to chest pain, is diaphoresis.",
+          "Dyspnea (shortness of breath)",
+          "Dyspnea (dĭsp-NĒ-ă): Shortness of breath",
+          "Dyspnea (shortness of breath), especially during physical activities",
+          "Vomiting (VOM-ĭ-ting): Forceful ejection of stomach contents.",
+          "Nausea (NAW-zē-ă): The feeling of an urge to vomit.",
+          "Nausea (NAW-zē-ă): A feeling of sickness with an inclination to vomit. (Chapter 12.5)",
+          "Arthritis (är-THRĪ-tĭs): A general term for conditions affecting the joints and surrounding tissues, leading to pain, swelling, stiffness, and limited movement. It includes various types such as osteoarthritis and rheumatoid arthritis. (Chapter 13.6)",
+          "A rash is an area of redness and small spots appearing on the skin due to allergy or illness. There are different types of rashes that may occur, each with different appearances and causes. Terms used to describe rashes include the following:"
+        ],
+        "segundos_rag": 3.166679792004288,
+        "segundos": 4.043550042013521
+      },
+      {
+        "nota": "The patient is allergic to penicillin, shellfish, and contact dermatitis.",
+        "borrador": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+        "chunks": [
+          "Dermatitis (dûr-mă-TĪ-tĭs) is inflammation of the skin that can cause a rash. A common type of dermatitis is called contact dermatitis, caused by contact with a substance that causes an allergic reaction. For example, allergic skin reactions caused by latex allergy or poison ivy are examples of contact dermatitis. Dermatoconiosis (dûr-mă-tō-kō-nē-Ō-sĭs) is a type of dermatitis caused by dust contacting the skin. Systemic lupus erythematosus (sis-TĔM-ik LOO-pŭs ĕr-i-thē-mă-TO-sŭs)",
+          "Allergies (ĂL-ĕr-jēz): A condition in which the immune system reacts abnormally to a foreign substance. (Chapter 4.6)",
+          "Allergies (ĂL-ĕr-jēz) occur when a person’s immune system reacts to a substance and makes antibodies that identify that substance as harmful. Substances identified as allergens can cause inflammation of the skin, sinuses, nasal passages, airways, or digestive system. The severity of allergies varies from person to person and can range from minor irritation to a potentially life-threatening emergency called anaphylaxis (ăn-ă-fĭ-LĂK-sĭs). While most allergies can’t be cured, allergy medications can help relieve"
+        ],
+        "segundos_rag": 0.9964124999969499,
+        "segundos": 1.3290671669965377
+      },
+      {
+        "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "borrador": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+        "chunks": [],
+        "segundos_rag": 1.0621610000089277,
+        "segundos": 2.099912416000734
+      },
+      {
+        "nota": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running hypertension the last few months and his hemoglobin A1C came back at obstetrics. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "borrador": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+        "chunks": [
+          "Diabetic retinopathy (ret-ĭn-OP-ă-thē): A complication of diabetes mellitus causing fluid leakage from blood vessels in the retina, leading to vision impairment. (Chapter 15.5)",
+          "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+          "Diabetic Retinopathy Diabetic retinopathy (ret-ĭn-OP-ă-thē) is a complication caused by diabetes mellitus. Fluid leakage from blood vessels causes the retinal tissue to swell, resulting in cloudy or blurred vision. If left untreated, diabetic retinopathy can cause blindness. There are various treatments for diabetic retinopathy, such as laser surgery to seal leaking blood vessels or the injection of medications into the eye to decrease inflammation. People with advanced cases of diabetic retinopathy may require surgery to remove and replace the gel-like fluid in the back of the eye, called the vitreous humor. Surgery may also be needed to repair a retinal detachment, a separation of the light-receiving",
+          "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+          "1. Break down the medical term into word components: Hyper/glyc/emia 2. Label the word components: Hyper = P; glyc = WR; emia = S 3. Define the word components: Hyper = excessive; glyc = sugar; emia = in the blood 4. Create a final definition of the medical term: Excessive sugar in the blood",
+          "Random blood glucose (răn-dŏm blŭd GLŪ-kōs): A test measuring the sugar levels in the blood at any given time, regardless of when the last meal was consumed, utilized to monitor and manage blood sugar levels in individuals with diabetes. (Chapter 17.6)",
+          "Fasting blood glucose (FĂST-ing blŭd GLŪ-kōs) (FBG): Assesses an individual’s blood glucose level when they have had no caloric intake for at least eight hours. The normal fasting blood glucose range is between 70-100 mg/dL. Hypoglycemia (hī-pō-glī-SĒ-mē-ă) refers to an abnormally low blood glucose level below 70 mg/dL.",
+          "Hypertension: Excessive/high blood pressure",
+          "Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): Assesses an individual’s average blood glucose levels over the preceding two to three months. HbA1C is a form of hemoglobin. When glucose is in the bloodstream, it attaches to hemoglobin, forming glycated hemoglobin. The normal range for HbA1C is typically less than 5.7%.",
+          "Grave’s disease (GRĀVZ dĭ-ZĒZ): An autoimmune disorder that is the most common cause of hyperthyroidism, where the immune system attacks the thyroid gland causing it to produce too much thyroid hormone. (Chapter 17.6) Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): A blood test that indicates the average level of blood sugar over the past two to three months, used to diagnose and manage diabetes. (Chapter 17.6)",
+          "8.2 Word Components Related to Obstetrics",
+          "8.2 Word Components Related to Obstetrics | 397",
+          "8.2 Word Components Related to Obstetrics 395"
+        ],
+        "segundos_rag": 3.333308124987525,
+        "segundos": 4.3643755829834845
+      },
+      {
+        "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "borrador": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+        "chunks": [
+          "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+          "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+          "Low blood pressure, called hypotension (hī-pō-TEN-shŏn), has several causes, such as dehydration, vomiting, diarrhea, or medications used to treat hypertension. Treatment for hypotension typically includes fluid replacement. High blood pressure is called hypertension (hī-pĕr-TEN-shŏn) (HTN). Hypertension has a variety of causes, with risk factors such as obesity, lack of exercise, smoking, high salt diet, diabetes, and kidney disease."
+        ],
+        "segundos_rag": 1.6333788750052918,
+        "segundos": 2.623898416000884
+      },
+      {
+        "nota": "The patient is a male with no acute coronary syndrome. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a distended with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "borrador": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+        "chunks": [
+          "Acute coronary syndrome (ə-KYŪT KOR-ŏ-nā-rē SĬN-drōm) (ACS): A term used to describe a range of conditions associated with sudden, reduced blood flow to the heart, including myocardial infarction. (Chapter 9.6)",
+          "Swollen, distended abdomen",
+          "Distended (dĭs-TĔN-dĕd): Stretched out or enlarged, often used to describe the bladder or abdomen when filled with fluid or gas. (Chapter 5.4)"
+        ],
+        "segundos_rag": 2.991521542004193,
+        "segundos": 4.44724354200298
+      },
+      {
+        "nota": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "borrador": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+        "chunks": [],
+        "segundos_rag": 1.1143619169888552,
+        "segundos": 1.672562208987074
+      },
+      {
+        "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "borrador": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+        "chunks": [],
+        "segundos_rag": 1.4454808330046944,
+        "segundos": 2.4207350830110954
+      }
+    ],
+    "memoria_qwen_gb": 1.117320736,
+    "vram_extra_gb": null,
+    "memoria_otras_piezas_gb": 1.2607482920000002,
+    "formato": "q4_k_m",
+    "segundos_borrador": [
+      1.175702624997939,
+      0.2123262910026824,
+      0.8768702500092331,
+      0.3326546669995878,
+      1.0377514159918064,
+      1.0310674579959596,
+      0.9905195409955923,
+      1.4557219999987865,
+      0.5582002919982187,
+      0.975254250006401
+    ],
+    "maquina": "arm64 | 12 hilos | mps"
+  }
+}

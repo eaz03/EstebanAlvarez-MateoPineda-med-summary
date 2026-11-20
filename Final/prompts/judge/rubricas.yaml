@@ -1,0 +1,36 @@
+# Flow-Judge rubrics for the 3 judges (notebook cell 33).
+pesos:
+  grounding: 0.45
+  coverage: 0.35
+  form: 0.2
+grounding_cap:
+  si_grounding_menor_o_igual: 2
+  final_maximo: 2.0
+rubricas:
+  grounding:
+    usa_dialogo: true
+    criterio: Is every statement in the clinical note supported by the doctor-patient conversation? A statement fails if it was never said, if it says the opposite (wrong number, time, side or negation), or if it gives something to the wrong person. Missing information does NOT count against the note.
+    rubrica: |-
+      - Score 1: Several statements are invented or contradict the conversation.
+      - Score 2: One serious statement is invented or contradicts the conversation (a medication, dose, allergy, negation or side).
+      - Score 3: One minor statement is not supported by the conversation.
+      - Score 4: All statements are supported, but one is slightly imprecise.
+      - Score 5: Every statement is supported by the conversation. If the conversation has no medical content and the note says so, the score is 5.
+  coverage:
+    usa_dialogo: true
+    criterio: 'Does the clinical note include the important clinical facts that were said in the conversation: symptoms and denied symptoms, onset and duration, medications and doses, allergies, exam findings and vital signs, diagnoses and plans? Only facts said in the conversation count. Wrong facts in the note are judged by another criterion.'
+    rubrica: |-
+      - Score 1: The note misses most of the important facts, including the main reason for the visit.
+      - Score 2: The note misses several important facts.
+      - Score 3: The note misses one or two important facts.
+      - Score 4: The note misses only a minor detail.
+      - Score 5: The note includes all the important facts, or the conversation has no medical content.
+  form:
+    usa_dialogo: false
+    criterio: Is the output written as a professional clinical note in the third person, and not as a dialogue, a chat reply or casual language?
+    rubrica: |-
+      - Score 1: It is written as a dialogue (speaker names such as "Doctor:" or "Patient:"), uses I, you or we, asks questions, is a chat reply, or is not about a patient's health.
+      - Score 2: It is in the third person but uses several casual expressions.
+      - Score 3: It is professional but has one or two casual expressions.
+      - Score 4: It is professional with only minor style problems.
+      - Score 5: It is fully professional third-person clinical language. A note that only says the conversation has no clinical content scores 5.

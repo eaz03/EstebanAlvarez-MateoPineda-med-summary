@@ -1,0 +1,11 @@
+dimension,puntaje_baseline,puntaje_finetuned
+rouge1_promedio,0.294,0.443
+rouge2_promedio,0.131,0.216
+rougeL_promedio,0.246,0.381
+bert_f1_promedio,0.344,0.444
+juez_grounding_promedio,3.3,3.4
+juez_coverage_promedio,2.9,3.0
+juez_form_promedio,2.0,4.0
+juez_final_promedio,2.845,3.38
+aciertos_dominio,1/10,1/10
+pesos_juez,"{""grounding"": 0.45, ""coverage"": 0.35, ""form"": 0.2}"

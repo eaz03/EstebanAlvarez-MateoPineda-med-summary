@@ -1,0 +1,14 @@
+# Text read by a model. Placeholders like [NAME] are filled with .replace() in the code.
+# Tool-calling prompts (notebook cells 75, 77).
+descripciones:
+  agendar_cita: 'Schedules the next appointment. Use ONLY if the text explicitly says a follow-up visit will happen after a number of weeks or months. Arguments: weeks (integer) OR months (integer), never both. Convert nothing: use the unit the text uses.'
+  buscar_en_corpus: 'Rewrites the whole draft with technical medical terms from a glossary. The draft is sent automatically: use empty args. Use it ONLY if the draft contains everyday expressions for symptoms or conditions. Do NOT use it if the draft already uses medical terms.'
+system_una_tool: |-
+  You decide whether to use ONE tool for a clinical draft.
+  Tool: [ESQUEMA]
+  If the tool clearly applies to the draft, answer ONLY with JSON: {"tool": "[NOMBRE]", "args": {...}}. Otherwise answer exactly: NO_TOOL
+user_tool: 'Draft clinical note: [RESUMEN]'
+reintento_tool: |2-
+
+  You called [NOMBRE] and got: [OBS]
+  Fix the arguments, or answer NO_TOOL.

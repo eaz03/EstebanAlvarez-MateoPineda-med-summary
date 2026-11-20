@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedSummary</title>
+<link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+<main>
+  <section class="tarjeta">
+    <h2>Diálogo médico-paciente</h2>
+    <p class="suave">Escriba o pegue el diálogo en inglés. El modelo ajustado escribe un borrador de nota clínica y un agente
+      decide si usar el glosario médico (RAG) para cambiar expresiones cotidianas por términos técnicos y si agendar la cita de control.
+      No escriba nombres ni datos que identifiquen al paciente.</p>
+    <div class="fila">
+      <span class="suave">Ejemplos:</span>
+      <button type="button" class="secundario" data-ejemplo="0">Cita de control</button>
+      <button type="button" class="secundario" data-ejemplo="1">Síntoma coloquial</button>
+      <button type="button" class="secundario" data-ejemplo="2">Adversarial (no clínico)</button>
+    </div>
+    <label for="dialogo">Diálogo</label>
+    <textarea id="dialogo" maxlength="6000" placeholder="Doctor: What brings you in today?&#10;Patient: ..."></textarea>
+    <div class="fila">
+      <button type="button" id="procesar">Generar nota</button>
+      <span id="estado" class="suave"></span>
+    </div>
+  </section>
+
+  <section class="tarjeta" id="resultado" hidden>
+    <h2>Resultado</h2>
+    <p class="aviso" id="aviso"></p>
+    <label>Nota final sugerida</label>
+    <div class="nota" id="nota"></div>
+    <label>Borrador del modelo ajustado (antes del agente)</label>
+    <div class="nota" id="borrador"></div>
+    <div class="fila"><strong>Componentes usados:</strong> <span class="etiquetas" id="componentes"></span></div>
+    <p id="valvula"></p>
+    <p class="suave" id="tiempos"></p>
+  </section>
+</main>
+<script src="/static/comun.js"></script>
+<script>
+construirCabecera('/');
+const $ = id => document.getElementById(id);
+const NOMBRES = { modelo_ajustado: 'Modelo ajustado (Flan-T5 + LoRA)', rag: 'RAG avanzado (glosario médico)', agendar_cita: 'Herramienta: agendar cita' };
+const EJEMPLOS = [
+  "Doctor: Your symptoms seem to be improving. I’d like you to continue with the current treatment plan, and we’ll schedule a follow-up appointment in three months.\nPatient: Okay, doctor. Should I come in sooner if my symptoms get worse?\nDoctor: Yes, absolutely. If your symptoms worsen or you develop any new concerns, please contact us before your next appointment.\nPatient: All right. Thank you, doctor.\nDoctor: You’re welcome. I’ll see you again in three months. Take care!",
+  "Patient: I have had more thirst this week.\nDoctor: Do you have any other symptoms?\nPatient: No.\n",
+  "Roses are red, lemons are green.",
+];
+document.querySelectorAll('[data-ejemplo]').forEach(b => b.addEventListener('click', () => { $('dialogo').value = EJEMPLOS[Number(b.dataset.ejemplo)]; }));
+
+$('procesar').addEventListener('click', async () => {
+  const dialogo = $('dialogo').value.trim();
+  if (!dialogo) { $('estado').textContent = 'Escriba un diálogo.'; $('estado').className = 'error'; return; }
+  $('procesar').disabled = true;
+  $('estado').textContent = 'Procesando... (puede tardar varios segundos, más en CPU)';
+  $('estado').className = 'suave';
+  const inicio = performance.now();
+  try {
+    const r = await postJson('/procesar', { dialogo });
+    $('aviso').textContent = r.aviso;
+    $('nota').textContent = r.nota;
+    $('borrador').textContent = r.borrador;
+    $('componentes').replaceChildren(...r.componentes.map(c => crear('span', { class: 'etiqueta' }, NOMBRES[c] || c)));
+    $('valvula').textContent = r.valvula
+      ? 'Válvula activada: el agente devolvió el borrador sin cambios (no encontró términos respaldados por el glosario, el texto no era clínico o no había cita que agendar).'
+      : 'El agente modificó el borrador.';
+    $('valvula').className = r.valvula ? 'suave' : '';
+    $('tiempos').textContent = `Borrador: ${numero(r.segundos_borrador)} s · Agente (RAG y herramientas): ${numero(r.segundos_agente)} s · Total: ${numero(r.segundos)} s`;
+    $('resultado').hidden = false;
+    $('estado').textContent = `Listo en ${numero((performance.now() - inicio) / 1000, 1)} s.`;
+  } catch (error) {
+    $('estado').textContent = error.message;
+    $('estado').className = 'error';
+  } finally {
+    $('procesar').disabled = false;
+  }
+});
+</script>
+</body>
+</html>

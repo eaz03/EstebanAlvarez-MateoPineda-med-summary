@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedSummary · Registros</title>
+<link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+<main>
+  <section class="tarjeta">
+    <h2>Registros de peticiones</h2>
+    <p class="suave">Una línea JSON por petición (logs/peticiones.jsonl): hora (UTC), latencia, componentes usados y si se activó la válvula.
+      No se guarda el diálogo ni la nota.</p>
+    <div class="fila">
+      <button type="button" id="recargar" class="secundario">Recargar</button>
+      <span id="resumen" class="suave"></span>
+    </div>
+    <div id="tabla"></div>
+  </section>
+</main>
+<script src="/static/comun.js"></script>
+<script>
+construirCabecera('/registros');
+const $ = id => document.getElementById(id);
+
+async function cargar() {
+  try {
+    const registros = await api('/api/registros?n=200');
+    if (!registros.length) { $('tabla').replaceChildren(crear('p', { class: 'suave' }, 'Todavía no hay peticiones registradas.')); $('resumen').textContent = ''; return; }
+    const columnas = [{ nombre: 'Hora (UTC)' }, { nombre: 'Latencia (s)', numerica: true }, { nombre: 'Componentes' }, { nombre: 'Válvula' }];
+    const filas = registros.map(r => [r.hora, numero(r.latencia_s), (r.componentes || []).join(', ') || '-', r.valvula ? 'sí' : 'no']);
+    $('tabla').replaceChildren(tabla(columnas, filas));
+    $('resumen').textContent = `${registros.length} peticiones (las más recientes primero).`;
+  } catch (error) { $('tabla').replaceChildren(crear('p', { class: 'error' }, error.message)); }
+}
+$('recargar').addEventListener('click', cargar);
+cargar();
+</script>
+</body>
+</html>

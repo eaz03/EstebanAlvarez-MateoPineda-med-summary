@@ -1,0 +1,5 @@
+
+# INPUT
+Below are the inputs required for performing the task:
+<inputs>
+[ENTRADAS]</inputs>

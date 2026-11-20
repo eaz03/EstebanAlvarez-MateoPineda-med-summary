@@ -1,0 +1,467 @@
+{
+  "baseline": [
+    {
+      "nota": "Patient: I've had a dull ache in my lower back for about three weeks now.",
+      "segundos": 0.33843820900074206,
+      "chunks": null
+    },
+    {
+      "nota": "Patient: My throat has been killing me since yesterday and I have a fever.",
+      "segundos": 0.21727766700496431,
+      "chunks": null
+    },
+    {
+      "nota": "Doctor: I'm going to ask you about a few different body systems.",
+      "segundos": 0.44752179099305067,
+      "chunks": null
+    },
+    {
+      "nota": "Patient: I'm allergic to penicillin, it gives me hives.",
+      "segundos": 0.33733416700852104,
+      "chunks": null
+    },
+    {
+      "nota": "Patient: I'm taking metformin, 500 milligrams twice a day, and lisinopril.",
+      "segundos": 0.6668900419899728,
+      "chunks": null
+    },
+    {
+      "nota": "Your blood sugar has been running high the last few months and your A1C came back at 8.2. I don't see any signs of infection or kidney involvement right now.",
+      "segundos": 0.5914740419975715,
+      "chunks": null
+    },
+    {
+      "nota": "Doctor: I'd like to start taking amlodipine 5 milligrams once a day for your blood pressure. I want to see you back in four weeks to recheck your blood pressure, and let's get a basic metabolic panel before that visit to check your kidney function.",
+      "segundos": 0.8663690829998814,
+      "chunks": null
+    },
+    {
+      "nota": "On examination, the patient is in no acute distress. Vital signs are stable, blood pressure 128 over 82, heart rate 76, temperature 98.4. Lungs are clear to auscultation bilaterally. Abdomen is soft, non-tender, non-distended, with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding.",
+      "segundos": 1.2108016249985667,
+      "chunks": null
+    },
+    {
+      "nota": "The pharmacy closes at 9 on weekdays. The pharmacy is closed on Monday at 2 PM.",
+      "segundos": 0.26797124999575317,
+      "chunks": null
+    },
+    {
+      "nota": "Patient needs to write a prescription for oxycodone for a friend who can't get to a doctor right now.",
+      "segundos": 0.5626592500047991,
+      "chunks": null
+    }
+  ],
+  "finetuned": [
+    {
+      "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+      "segundos": 1.175702624997939,
+      "chunks": null
+    },
+    {
+      "nota": "The patient has a fever since yesterday.",
+      "segundos": 0.2123262910026824,
+      "chunks": null
+    },
+    {
+      "nota": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+      "segundos": 0.8768702500092331,
+      "chunks": null
+    },
+    {
+      "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+      "segundos": 0.3326546669995878,
+      "chunks": null
+    },
+    {
+      "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+      "segundos": 1.0377514159918064,
+      "chunks": null
+    },
+    {
+      "nota": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+      "segundos": 1.0310674579959596,
+      "chunks": null
+    },
+    {
+      "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+      "segundos": 0.9905195409955923,
+      "chunks": null
+    },
+    {
+      "nota": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+      "segundos": 1.4557219999987865,
+      "chunks": null
+    },
+    {
+      "nota": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+      "segundos": 0.5582002919982187,
+      "chunks": null
+    },
+    {
+      "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+      "segundos": 0.975254250006401,
+      "chunks": null
+    }
+  ],
+  "rag_base": [
+    {
+      "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+      "segundos": 11.809734707989264,
+      "chunks": [
+        "Rest: Rest the strain or sprain for at least 24 hours. The health care provider may recommend not putting any weight on the injured area for 48 to 72 hours, so crutches may be needed for lower extremity injuries.",
+        "Sudden numbness or weakness of an arm or leg, especially on one side of the body",
+        "Symptoms of pyelonephritis include fever above 101 degrees F (38.3 degrees C), shaking chills, lower back pain or flank pain (i.e., on the sides of the back),",
+        "Mild to severe abdominal pain with sensitivity to touch",
+        "Pain or burning while urinating (dysuria)",
+        "abdominal pressure, such as coughing, sneezing, laughing, or exercise. Overactive bladder is another type of incontinence where there is a frequent",
+        "longer than ever and often well into adulthood. The impact of DMD can be significantly minimized by keeping the body as flexible, upright, and mobile as possible. As muscle deteriorates, a person with muscular dystrophy often develops contractures. If not treated, contractures can become severe, causing discomfort and restricting mobility and flexibility. Contractures can affect the knees, hips, feet, elbows, wrists, and fingers. However, there are many ways to minimize and postpone contractures. Range-of-motion exercises, performed on a regular schedule, help delay contractures by keeping tendons from shortening prematurely. Braces on the lower legs also can help keep the limbs stretched and flexible, delaying the onset of contractures. Eventually, a wheelchair is needed, typically by about age 12. Although a child and parents may dread using a wheelchair, many people find that when they start to use one, they are more mobile, energetic,",
+        "Symptoms of urinary retention can range from no symptoms to severe",
+        "A feeling of fullness in the lower abdomen",
+        "by compression of the median nerve within the carpal tunnel of the wrist, leading to pain, numbness, and tingling in the hand. (Chapter 16.6)"
+      ],
+      "borrador": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels."
+    },
+    {
+      "nota": "The patient has a fever since yesterday.",
+      "segundos": 1.056193541007815,
+      "chunks": [
+        "Fever (>38° C or >101°F)",
+        "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+        "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+        "Repeated episodes of pneumonia",
+        "Symptoms of pyelonephritis include fever above 101 degrees F (38.3 degrees C), shaking chills, lower back pain or flank pain (i.e., on the sides of the back),",
+        "in a person’s home. See Figure 5.17 for an image of a patient undergoing hemodialysis.",
+        "immediate surgery or a slow response to long-term inflammation.",
+        "oxygen or increased airflow to a patient in need of respiratory help. (Chapter 4.7)",
+        "Exacerbations (ĕg-ză-sĕr-BĀ-shŭns): Episodes where symptoms of a disease become worse or more severe. (Chapter 4.6)",
+        "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent"
+      ],
+      "borrador": "The patient has a fever since yesterday."
+    },
+    {
+      "nota": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+      "segundos": 2.6550504170154454,
+      "chunks": [
+        "A classic symptom of an MI includes sudden crushing pain beneath the sternum called angina (an-JĪ-nă) that may radiate down the left arm. Individuals often describe angina as “it feels as if something is sitting on my chest.” Other common symptoms include dyspnea, diaphoresis, nausea, and light-headedness. Diaphoresis (dī-ă-fŏ-RĒ-sĭs) means profuse (excessive) sweating. However, females may not experience these symptoms and only",
+        "Nausea (NAW-zē-ă): A feeling of sickness with an inclination to vomit. (Chapter 12.5)",
+        "Dyspnea (dĭsp-NĒ-ă): Shortness of breath",
+        "Slight body aches or a mild headache",
+        "breath, chest pain, fatigue, dizziness, and palpitations. Valvular heart disease is diagnosed by echocardiography. Treatment may include medications to treat the symptoms or surgery to repair or replace the",
+        "Nausea (NAW-zē-ă): The feeling of an urge to vomit.",
+        "Physical symptoms, such as cramps, bloating, breast tenderness, headaches, and joint or muscle pain",
+        "Angina (an-JĪ-nă): Chest pain caused by reduced blood flow to the heart muscle, often associated with coronary artery disease. (Chapter 9.6)",
+        "Dyspnea (shortness of breath)",
+        "breath, fatigue, fast heartbeat, dizziness, or pale skin caused by anemia. Diagnostic testing for prostate cancer may include the following 7:"
+      ],
+      "borrador": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood."
+    },
+    {
+      "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+      "segundos": 1.5586251670029014,
+      "chunks": [
+        "Allergic (AL-ĕr-jĭk) responses are specific types of hypersensitivity reactions that arise when the immune system reacts to allergens. Allergens (AL-ĕr-jĕnz) are substances that are generally harmless to most individuals. Common allergens include pollen, dust mites, pet dander, certain foods, and insect venom. When a person with allergies encounters these allergens, their immune system goes into overdrive, releasing histamines and other inflammatory molecules that trigger symptoms such as itching, sneezing, wheezing, hives, or anaphylaxis. Anaphylaxis (ăn-ă-fĭ-LĂK-sĭs) is a severe, potentially life-threatening allergic reaction that can cause bronchoconstriction and swelling of the throat, leading to obstruction of the airway, as well as decreased cardiac output that can lead to shock. Recognition of early symptoms and signs of anaphylaxis and prompt intervention are crucial. Treatment typically involves the administration of epinephrine to counteract the systemic effects of",
+        "drug allergy can cause hives, pruritus, rash, swelling in the respiratory tract, and anaphylaxis.",
+        "Allergens (AL-ĕr-jĕnz): Substances that are usually harmless but can cause allergic responses in some people. Common allergens include pollen, dust mites, pet dander, certain foods, and insect venom. (Chapter 11.6)",
+        "Allergist (AL-ĕr-jist): A physician specializing in the study and treatment of allergies. (Chapter 11.7)",
+        "Severe allergies, including allergies to foods, insect stings, medications, and blood transfusions, can trigger a severe reaction known as anaphylaxis. As a life-threatening medical emergency, anaphylaxis can cause a patient to go into anaphylactic shock, a potentially fatal condition. Signs and symptoms of anaphylaxis are as follows2:",
+        "Allergies (ĂL-ĕr-jēz): A condition in which the immune system reacts abnormally to a foreign substance. (Chapter 4.6)",
+        "symptoms. There are many types of allergies. Allergic rhinitis, commonly referred to as “hay fever,” can cause sneezing; pruritus (PRŪ-rī-tŭs), itching of the skin, as well as itching of the nose, eyes, or roof of the mouth; rhinorrhea; and watery, red, or swollen eyes. A food allergy can cause tingling in the mouth; swelling of the lips, tongue, face, or throat; hives; and anaphylaxis. Read more information about anaphylaxis in the following subsection. An insect sting allergy can cause swelling at the sting site, itching or hives all over the body, cough, chest tightness, wheezing, shortness of breath, and anaphylaxis. A",
+        "Appendicitis (ă-pen-dĭ-SĪT-ĭs): Inflammation of the appendix. (Chapter 12.4)",
+        "common in children and often associated with upper respiratory infections. (Chapter 15.5)",
+        "Allergies (ĂL-ĕr-jēz) occur when a person’s immune system reacts to a substance and makes antibodies that identify that substance as harmful. Substances identified as allergens can cause inflammation of the skin, sinuses, nasal passages, airways, or digestive system. The severity of allergies varies from person to person and can range from minor irritation to a potentially life-threatening emergency called anaphylaxis (ăn-ă-fĭ-LĂK-sĭs). While most allergies can’t be cured, allergy medications can help relieve"
+      ],
+      "borrador": "The patient is allergic to penicillin, shellfish, and latex allergies."
+    },
+    {
+      "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+      "segundos": 2.774788707989501,
+      "chunks": [
+        "adjust their medications based on these levels. See Figure 17.4 for an image",
+        "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+        "Medications, including prescription drugs and over-the-counter pain relievers",
+        "People with diabetes must monitor their blood glucose levels and often",
+        "Birth control pills to help regulate hormone levels",
+        "used to calculate their estimated GFR (eGFR). Lower than normal eGFR levels",
+        "Over-the-counter pain relievers, such as ibuprofen, naproxen, or aspirin to help relieve physical symptoms",
+        "Medicines including nonsteroidal anti-inflammatory drugs (NSAIDs), certain antibiotics and blood pressure medicines, intravenous contrast (dye), HIV medications, and some types of cancer",
+        "Figure 9.16 Heart Failure",
+        "Several treatments are available for hyperthyroidism, such as antithyroid"
+      ],
+      "borrador": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days."
+    },
+    {
+      "nota": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+      "segundos": 3.905008582994924,
+      "chunks": [
+        "measures blood sugar levels after an individual has not eaten for at least 8 hours, used to diagnose diabetes. (Chapter 17.6)",
+        "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+        "(ĕnd-stāj rē-năl dĭ-ZĒZ). Risk factors for developing CKD include diabetes mellitus type 1 and type 2, high blood pressure, heart disease, family history of CKD, and obesity. People with CKD may not feel ill or notice any symptoms. The only way to diagnose CKD is through blood and urine tests that measure creatinine, urea nitrogen, and protein levels. Read more information about these diagnostic tests in the “Medical Specialists, Diagnostic Testing, and Procedures Related to the Urinary System” section. CKD is treated by carefully managing blood pressure and diabetes to prevent further damage to the nephrons. If the kidneys stop working, dialysis",
+        "Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): Assesses an individual’s average blood glucose levels over the preceding two to three months. HbA1C is a form of hemoglobin. When glucose is in the bloodstream, it attaches to hemoglobin, forming glycated hemoglobin. The normal range for HbA1C is typically less than 5.7%.",
+        "People with diabetes must monitor their blood glucose levels and often",
+        "Glomerulonephritis (glō-mĕr-ū-lō-nĕ-FRĪ-tĭs) involves inflammation of the glomerular capillaries. Glomerulonephritis can be caused by immune system problems, cancer, or infections such as strep infections, viruses, heart infections, or abscesses. It can develop quickly and lead to kidney failure, or it can become a chronic disease. Damage to the glomeruli affects their ability to filter correctly, and blood and protein can be lost in the urine. Common symptoms of glomerulonephritis include blood in the urine (hematuria), foamy urine (due to excess protein in the urine), and swelling (edema) of the face, eyes, ankles, feet, legs, or abdomen due to decreased protein (and osmotic pressure) in the bloodstream. Many diagnostic tests may be performed, but the diagnosis is typically confirmed by a kidney biopsy. Treatment depends upon the cause, but controlling high blood pressure with medications is usually the most important part of treatment. Drugs that",
+        "function of the pancreas. A potentially life-threatening complication of type 1 diabetes is diabetic ketoacidosis (dī-ă-BĔT-ĭk kē-tō-ăs-ĭ-DŌ-sĭs) (DKA). DKA develops when the body breaks down fatty acids for energy when there isn’t enough insulin to facilitate the update of glucose into cells. As a result, excessive ketones are created, causing the body to become acidic. Treatment includes intravenous administration of insulin, fluids, and electrolytes to restore normal body functioning.",
+        "indicate kidney disease, and very low levels indicate kidney failure.",
+        "Grave’s disease (GRĀVZ dĭ-ZĒZ): An autoimmune disorder that is the most common cause of hyperthyroidism, where the immune system attacks the thyroid gland causing it to produce too much thyroid hormone. (Chapter 17.6) Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): A blood test that indicates the average level of blood sugar over the past two to three months, used to diagnose and manage diabetes. (Chapter 17.6)",
+        "Acute kidney failure is diagnosed through blood and urine tests that measure creatinine, urea nitrogen, and protein levels in the blood and urine. Read more information about these diagnostic tests in the “Medical Specialists, Diagnostic Testing, and Procedures Related to the Urinary System” section. Acute kidney failure is typically treated with dialysis and medications. Read more information about dialysis in the “Medical Specialists, Diagnostic Testing, and Procedures Related to the Urinary System” section."
+      ],
+      "borrador": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself."
+    },
+    {
+      "nota": "Amlodipine 5 mg daily for blood pressure. Reduce sodium intake and engage in moderate aerobic activity for at least 20 to 30 minutes most days. We will follow up in four weeks to reassess blood pressure and obtain a basic metabolic panel prior to your appointment.",
+      "segundos": 3.384488166004303,
+      "chunks": [
+        "filtrate. The volume of filtrate formed by both kidneys per minute is called the glomerular filtration rate (glō-MER-yū-lăr fĭl-TRĀ-shŭn rāt) (GFR). GFR is used to assess how well the kidneys are functioning. The heart pumps about five liters of blood per minute when a person is resting, and approximately 20 percent of this (i.e., one liter) enters the kidneys to be filtered per minute. On average, this results in the production of about 115 mL/min of filtrate produced by the nephrons. However, 99 percent of this filtrate is returned to the circulation by reabsorption so that only about 1–2 liters of urine are",
+        "calcium levels when necessary to maintain homeostatic balance.",
+        "pressure to reduce blood volume and, thereby, reduce blood pressure.",
+        "The kidneys filter all the blood in your body every 30 minutes and create urine. They remove waste products and excess fluid and also regulate electrolytes and hormones that control blood pressure, stimulate production",
+        "to 20 quarts of urine a day. See Figure 17.4 for an image of dilute urine seen in polyuria. DI is often treated with medication that mimics the effects of ADH. Note that diabetes insipidus is not the same as diabetes mellitus. Although",
+        "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+        "goal of raising the piston to a specified level. See Figure 4.18 for an image of a patient using an incentive spirometer. The patient should attempt to hold their breath for five seconds, or as long as tolerated, and then rest for a few seconds. This technique should be repeated by the patient ten times every",
+        "Hypotension (hī-pō-TĔN-shŭn): Abnormally low blood pressure. (Chapter 17.6)",
+        "Low blood pressure, called hypotension (hī-pō-TEN-shŏn), has several causes, such as dehydration, vomiting, diarrhea, or medications used to treat hypertension. Treatment for hypotension typically includes fluid replacement. High blood pressure is called hypertension (hī-pĕr-TEN-shŏn) (HTN). Hypertension has a variety of causes, with risk factors such as obesity, lack of exercise, smoking, high salt diet, diabetes, and kidney disease.",
+        "Figure 5.4 Blood Flow in the Kidneys"
+      ],
+      "borrador": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function."
+    },
+    {
+      "nota": "The patient is a male with no acute distress. His blood pressure is 128/82, his heart rate is 76, and his temperature is 98.4°F. The abdomen is soft, non-tender, and non-distended with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+      "segundos": 4.165006875002291,
+      "chunks": [
+        "Mild to severe abdominal pain with sensitivity to touch",
+        "Pressure or cramping in the groin or lower abdomen",
+        "A feeling of fullness in the lower abdomen",
+        "Pain in the upper right side of the abdomen",
+        "Ascites (ă-SĪ-tēz): Abnormal fluid buildup in the abdominal cavity.",
+        "Meconium (mē-KŌ-nē-ŭm): The first stool of a newborn. (Chapter 8.4)",
+        "abdominal pressure, such as coughing, sneezing, laughing, or exercise. Overactive bladder is another type of incontinence where there is a frequent",
+        "Upper gastrointestinal series (ŬP-ĕr GAS-trō-in-TĔS-tĭ-năl SĪR-ēz): A series",
+        "Paralytic ileus (păr-ă-LĬT-ĭk Ī-lē-ŭs), which is when the bowels become temporarily paralyzed",
+        "Swollen, distended abdomen"
+      ],
+      "borrador": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema."
+    },
+    {
+      "nota": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+      "segundos": 2.072531583995442,
+      "chunks": [
+        "adjust their medications based on these levels. See Figure 17.4 for an image",
+        "contact lenses, medicine, or surgery, and which interferes with daily activities. (Chapter 15.5)",
+        "Medications, including prescription drugs and over-the-counter pain relievers",
+        "measures blood sugar levels after an individual has not eaten for at least 8 hours, used to diagnose diabetes. (Chapter 17.6)",
+        "Urine culture and sensitivity (yū-rēn KŬL-chŭr ănd sĕn-sĭ-TĬV-ĭ-tē) (C&S) detects and identifies the number and type of bacteria growing in urine that can indicate a urinary tract infection (UTI). If pathogenic bacteria are found, a sensitivity report is generated that lists antibiotics to which the bacteria are sensitive to for treatment. A culture that is reported as “no growth in 24 or 48 hours” usually indicates that there is no infection. If a culture shows growth of several different types of bacteria, then it is likely due to contamination of the urine sample during collection, and a new collection of urine may be",
+        "Rest: Rest the strain or sprain for at least 24 hours. The health care provider may recommend not putting any weight on the injured area for 48 to 72 hours, so crutches may be needed for lower extremity injuries.",
+        "Coughing that gets worse or doesn’t go away",
+        "cause permanent damage to the reproductive organs and infertility. Chlamydia is diagnosed by a health care provider by a urine sample or by using a cotton swab to obtain a specimen that is sent to a lab for analysis. Chlamydia is treated with antibiotics. All sexual partners within the past 60 days should be notified and examined by a health care provider, keeping in mind that not having symptoms does not mean there is no infection. Reinfection is common, so people diagnosed with chlamydia should be retested three months after treatment of the initial infection, regardless of whether they believe that their sexual partners were successfully",
+        "Acute phase: Six to 12 hours after childbirth",
+        "help minimize the edema. See Figure 9.15 for an image of a patient with edema."
+      ],
+      "borrador": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM."
+    },
+    {
+      "nota": "The patient requires oxycodone for a friend who cannot access medical attention immediately. There is no clinical justification for prescribing it at this time. Encourage the patient to discuss alternative methods to assist his friend in obtaining proper care.",
+      "segundos": 2.854542417015182,
+      "chunks": [
+        "oxygen or increased airflow to a patient in need of respiratory help. (Chapter 4.7)",
+        "topical pain relievers may be prescribed. If joint damage is severe, joint",
+        "Doctor of Osteopathy Osteopathy (ŏs-tē-OP-ă-thē) is a branch of medical practice that emphasizes the treatment of medical disorders through the manipulation and massage of the bones, joints, and muscles. A Doctor of Osteopathic Medicine (dŏk-tŏr ŏf ŏs-tē-ŏ-PĂTH-ĭk mĕd-ĭ-sĭn) (DO) uses a whole-person approach to help prevent illness and injury. DOs look beyond symptoms to understand how lifestyle and environmental factors impact a person’s well-being. They practice medicine according to science and technology, but also consider options to complement medications and surgery. As part of their education, DOs receive special training in the musculoskeletal system, the body’s",
+        "Medications, including prescription drugs and over-the-counter pain relievers",
+        "or a kidney transplant is needed for survival. Read more information about dialysis and kidney transplantation in the “Medical Specialists, Diagnostic Testing, and Procedures Related to the Urinary System” section.",
+        "Use terms related to the urinary system",
+        "managed by respiratory therapists. See Figure 4.24 for an image of a simulated patient who is intubated with an endotracheal tube that is attached to a mechanical ventilator.",
+        "prongs that are inserted into the patient’s nares (nostrils). See Figure 4.32 for an image of a nasal cannula. Nasal cannulas are used for short- and long-term therapy and are best used with stable patients who require low amounts of oxygen, such as patients with COPD.",
+        "Over-the-counter pain relievers, such as ibuprofen, naproxen, or aspirin to help relieve physical symptoms",
+        "urine. See Figure 5.18 for an illustration of a urine collection bag connected to an indwelling catheter as the patient is lying in bed."
+      ],
+      "borrador": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care."
+    }
+  ],
+  "rag_avanzado": [
+    {
+      "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pulmonary embolism right after. He has no anesthesia, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, hyperthyroidism, or trouble with his bladder or bowels.",
+      "segundos": 7.451148041989654,
+      "chunks": [
+        "A pulmonary embolism (PULL-muh-nair-ee EM-boh-liz-uhm) (PE) is a blood clot or other substance, such as fat or an air bubble, that has traveled through the bloodstream and lodged in a smaller vessel within the pulmonary circulation in the lungs and obstructed blood flow. This blockage causes lack",
+        "extremities (i.e., numbness, tingling, and pain), and anesthesia (an-ĕs-THĒ- zhă) refers to a lack of feeling or sensation.",
+        "Sudden numbness or weakness of an arm or leg, especially on one side of the body",
+        "Orientation (or-ē-ĕn-TĀ-shŏn): The patient’s awareness of their immediate circumstances (i.e., being oriented to person, place, and time). (Chapter 16.5) Paresthesia (par-es-THĒ-zh(ē-)ă): An abnormal sensation, such as tingling, pricking, or numbness, typically with no apparent physical cause. (Chapter 16.5)",
+        "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+        "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+        "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent",
+        "Hyperthyroidism (hī-pĕr-THĪ-rŏid-ĭzm): A condition characterized by excessive production of thyroid hormones by the thyroid gland, leading to symptoms like weight loss, increased heart rate, and anxiety. (Chapter 17.6)",
+        "Hyperemesis gravidarum (HĪ-pĕr-ĕm-Ē-sĭs GRAV-ĭ-dar-ŭm): A severe form of nausea and vomiting in pregnancy that can lead to dehydration and weight loss. (Chapter 8.5)"
+      ],
+      "borrador": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels."
+    },
+    {
+      "nota": "The patient has a fever since yesterday.",
+      "segundos": 1.0522630409977864,
+      "chunks": [
+        "Fever (FĒ-vŏr): A part of the inflammatory response that results in an overall",
+        "FEVER Fever (FĒ-vŏr), also referred to as pyrexia, is part of the inflammatory response that extends beyond the site of infection and affects the entire body, resulting in an overall increase in body temperature. Health care providers generally consider a fever to be 100.4°F (38°C) or higher. Fever enhances the innate immune response by stimulating white blood cells to kill pathogens. The rise",
+        "Influenza (in-floo-EN-ză), commonly referred to as the “flu,” is a highly contagious viral infection affecting the respiratory tract. Symptoms of influenza include fever, cough, sore throat, rhinorrhea (runny nose), muscle aches, headache, and fatigue (severe tiredness). Most people who get influenza will recover in less than two weeks, but some people develop complications (such as pneumonia) that can be life-threatening. Anyone can get influenza, even healthy people, and serious problems related to the flu can happen to anyone at any age, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), pregnant women, and children younger than five years old. Everyone aged six months and older should get an annual flu vaccine, ideally by the end of October, to prevent"
+      ],
+      "borrador": "The patient has a fever since yesterday."
+    },
+    {
+      "nota": "No angina or palpitations. dyspnea. nausea, vomiting, or diarrhea. No headache or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+      "segundos": 6.572013291006442,
+      "chunks": [
+        "Angina (an-JĪ-nă): Chest pain caused by reduced blood flow to the heart muscle, often associated with coronary artery disease. (Chapter 9.6)",
+        "Coronary artery disease (KOR-ŏ-nā-rē AR-tĕr-ē dĭ-ZĒZ) (CAD) occurs when atherosclerosis (i.e., buildup of plaque) in the coronary arteries obstructs the flow of oxygenated blood to the heart muscle. As oxygenated blood flow to the cardiac muscle cells is reduced, referred to as ischemia (ĭs-KEE-mē-ă), individuals often experience chest pain called angina (an-JĪ-nă). See Figure",
+        "diaphoresis (dī-ă-fŏ-RĒ-sĭs). For example, a significant symptom of a heart attack, in addition to chest pain, is diaphoresis.",
+        "Dyspnea (shortness of breath)",
+        "Dyspnea (dĭsp-NĒ-ă): Shortness of breath",
+        "Dyspnea (shortness of breath), especially during physical activities",
+        "Nausea (NAW-zē-ă): The feeling of an urge to vomit.",
+        "Nausea (NAW-zē-ă): A feeling of sickness with an inclination to vomit. (Chapter 12.5)",
+        "Slight body aches or a mild headache",
+        "by patients as the worst headache they have ever felt. Transient ischemic attacks (trăn-zhĕnt ĭs-kē-mĭk ă-tăks) (TIAs) are temporary periods of symptoms similar to a stroke, but irreversible damage to the brain cells do not occur. However, TIAs are considered warning signs of an",
+        "A rash is an area of redness and small spots appearing on the skin due to allergy or illness. There are different types of rashes that may occur, each with different appearances and causes. Terms used to describe rashes include the following:"
+      ],
+      "borrador": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood."
+    },
+    {
+      "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+      "segundos": 0.9819996669975808,
+      "chunks": [],
+      "borrador": "The patient is allergic to penicillin, shellfish, and latex allergies."
+    },
+    {
+      "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+      "segundos": 2.7078365409979597,
+      "chunks": [],
+      "borrador": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days."
+    },
+    {
+      "nota": "The patient is a diabetic retinopathy with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his hemoglobin A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+      "segundos": 5.030414499982726,
+      "chunks": [
+        "Diabetic retinopathy (ret-ĭn-OP-ă-thē): A complication of diabetes mellitus causing fluid leakage from blood vessels in the retina, leading to vision impairment. (Chapter 15.5)",
+        "Diabetes mellitus (dī-ă-BĒ-tēz MĔL-ĭ-tŭs) (DM) refers to disorders that cause hyperglycemia (high levels of glucose in the blood). Over time, hyperglycemia damages the blood vessels in the heart, kidneys, feet, and eyes. There are different types of diabetes called type 1, type 2, and gestational. Type 1 diabetes (tīp wŭn dī-ă-BĒ-tēz) is caused by an autoimmune disease that destroys the cells of the pancreas that create insulin. In type 2 diabetes (tīp tōō dī-ă-BĒ-tēz), the cells of the body do not use insulin effectively to facilitate the uptake of glucose for energy. Additionally, the pancreas may not",
+        "Diabetic Retinopathy Diabetic retinopathy (ret-ĭn-OP-ă-thē) is a complication caused by diabetes mellitus. Fluid leakage from blood vessels causes the retinal tissue to swell, resulting in cloudy or blurred vision. If left untreated, diabetic retinopathy can cause blindness. There are various treatments for diabetic retinopathy, such as laser surgery to seal leaking blood vessels or the injection of medications into the eye to decrease inflammation. People with advanced cases of diabetic retinopathy may require surgery to remove and replace the gel-like fluid in the back of the eye, called the vitreous humor. Surgery may also be needed to repair a retinal detachment, a separation of the light-receiving",
+        "Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): Assesses an individual’s average blood glucose levels over the preceding two to three months. HbA1C is a form of hemoglobin. When glucose is in the bloodstream, it attaches to hemoglobin, forming glycated hemoglobin. The normal range for HbA1C is typically less than 5.7%.",
+        "Grave’s disease (GRĀVZ dĭ-ZĒZ): An autoimmune disorder that is the most common cause of hyperthyroidism, where the immune system attacks the thyroid gland causing it to produce too much thyroid hormone. (Chapter 17.6) Hemoglobin A1C (HĒ-mō-glō-bĭn Ā-wŭn-SĒ) (HbA1C): A blood test that indicates the average level of blood sugar over the past two to three months, used to diagnose and manage diabetes. (Chapter 17.6)",
+        "White blood cells: A sign of infection or inflammation.",
+        "An infection (in-FEK-shŏn) is caused by the invasion and multiplication of microorganisms in the body, such as bacteria (bak-TĒR-ē-a), viruses, fungi, and parasites. Microorganisms that cause infection are referred to as pathogens (path-Ŏ-jĕns).",
+        "Acute coronary syndrome (ə-KYŪT KOR-ŏ-nā-rē SĬN-drōm) (ACS): A term used to describe a range of conditions associated with sudden, reduced blood flow to the heart, including myocardial infarction. (Chapter 9.6)",
+        "Acute kidney failure (ā-kūt kĭd-nē fāl-yŭr) is the rapid (less than two days) loss of kidney function. There are many possible causes of acute kidney failure. 1: They include the following",
+        "Acute phase: Six to 12 hours after childbirth"
+      ],
+      "borrador": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself."
+    },
+    {
+      "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+      "segundos": 4.044035915998393,
+      "chunks": [
+        "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+        "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+        "Low blood pressure, called hypotension (hī-pō-TEN-shŏn), has several causes, such as dehydration, vomiting, diarrhea, or medications used to treat hypertension. Treatment for hypotension typically includes fluid replacement. High blood pressure is called hypertension (hī-pĕr-TEN-shŏn) (HTN). Hypertension has a variety of causes, with risk factors such as obesity, lack of exercise, smoking, high salt diet, diabetes, and kidney disease."
+      ],
+      "borrador": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function."
+    },
+    {
+      "nota": "The patient is a male with no acute distress. He has a blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a malacia, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+      "segundos": 5.743796374998055,
+      "chunks": [
+        "Blood Pressure Blood pressure (BLŬD PRESH-ŭr) (BP) is the force of the blood against the vessel walls. In clinical practice, blood pressure is typically measured using a sphygmomanometer (sfĭg-mō-măn-ŎM-ĕt-ĕr), commonly called a blood pressure cuff. The cuff is placed over the brachial artery of the patient’s upper arm and inflated with air to temporarily occlude (ŏ-KLOOD) (block) blood flow and measure blood pressure. Blood pressure is recorded as a ratio of two numbers expressed as systolic pressure over diastolic pressure, measured in millimeters of mercury (mm Hg). For example, 120/80 mm Hg is a normal adult blood pressure. The systolic pressure is the higher value and reflects the arterial pressure resulting from the ejection of blood during ventricular contraction called systole. The diastolic pressure is the lower value and represents the arterial pressure of blood during ventricular relaxation called",
+        "Hypertension (hī-pĕr-TEN-shŏn) refers to elevated blood pressure greater than 120/80 mm Hg in an adult. Hypertension is very common, affecting",
+        "Hypotension (hī-pō-TĔN-shŭn): Abnormally low blood pressure. (Chapter 17.6)",
+        "more accurate measurement than the pulse. Abnormal heart rates are referred to as bradycardia and tachycardia. Bradycardia (brād-i-KARD-ē-ă) refers to a slow heart rate, less than 60 bpm in an adult. Tachycardia (tak-ē-KARD-ē-ă) refers to a fast heart rate, greater than",
+        "Heart Rate Heart rate (HART RĀT) (HR) is the number of heart beats per minute (bpm). HR can vary considerably among people based on their age, as well as their fitness level. For an adult, normal resting HR is 60–100 bpm. Although similar to the pulse, the heart rate is auscultated directly using a stethoscope and is a",
+        "Bradycardia (brad-ē-KAR-dē-ă) refers to a slow resting heart rate of less than 60 beats per minute. A normal resting heart rate for an adult is 60 to 100 beats per minute (bpm). However, heart rates can vary widely among individuals based on several factors like age, fitness level, overall health, and medication side effects. Physically fit athletes may have a heart rate of 50 to 60 bpm at rest with no symptoms. However, individuals with bradycardia whose heart is not pumping enough blood to sufficiently supply the brain and body tissues with oxygen may have symptoms, such as feeling tired, dizzy, short of breath, or confused. Individuals with symptomatic bradycardia may experience syncope (SING-kŏ-pē), a medical term for a brief lapse in consciousness, commonly referred to as fainting. Bradycardia is a common side effect of many cardiac medications and can also be caused by several cardiac diseases and disorders. Treatment of symptomatic bradycardia includes medications to increase heart rate or surgical implantation of a pacemaker in the heart to maintain a normal heart rate.",
+        "-malacia: Softening",
+        "-malacia: Softening",
+        "-malacia: Softening"
+      ],
+      "borrador": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema."
+    },
+    {
+      "nota": "The pharmacy is compound until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+      "segundos": 2.5300492090027547,
+      "chunks": [
+        "Open or compound (ō-pĕn ōr kŏm-pound frăk-chŭr): Bone is broken and pierces through the skin",
+        "OPEN RESOURCES FOR NURSING (OPEN RN)",
+        "-stomy: Artificial surgical opening"
+      ],
+      "borrador": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM."
+    },
+    {
+      "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+      "segundos": 3.201697417011019,
+      "chunks": [],
+      "borrador": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care."
+    }
+  ],
+  "tools": [
+    {
+      "nota": "The patient has had a dull ache in his lower back for about three weeks. He was moving furniture with his son and felt a pull right after. He has no numbness, tingling, or weakness in his legs. He has tried ice or heat. He has had no fever, weight loss, or trouble with his bladder or bowels.",
+      "segundos": 1.6807000000117114,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The patient has a fever since yesterday.",
+      "segundos": 1.8292087910085684,
+      "chunks": null,
+      "log": [
+        {
+          "tool": "buscar_en_corpus",
+          "resultado": "The patient has a fever since yesterday."
+        }
+      ]
+    },
+    {
+      "nota": "No chest pain or palpitations. No shortness of breath. No nausea, vomiting, or diarrhea. No headaches or dizziness. No joint pain or swelling. No rashes or skin changes. No changes in mood.",
+      "segundos": 1.3448979590029921,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The patient is allergic to penicillin, shellfish, and latex allergies.",
+      "segundos": 1.724286166994716,
+      "chunks": null,
+      "log": [
+        {
+          "tool": "buscar_en_corpus",
+          "resultado": "The patient is allergic to penicillin, shellfish, and latex allergies."
+        }
+      ]
+    },
+    {
+      "nota": "The patient is currently taking metformin, 500 milligrams twice a day, and lisinopril. The patient is taking a multivitamin and fish oil most days.",
+      "segundos": 1.5559153329959372,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The patient is a diabetic with poorly controlled type 2 diabetes. The patient's blood sugar has been running high the last few months and his A1C came back at 8.2. He does not see any signs of infection or kidney involvement right now, so he does not think there's anything acute going on beyond the diabetes itself.",
+      "segundos": 1.5268057909997879,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "Amlodipine 5 milligrams once a day for blood pressure. Cut back on salt and get in a 20 to 30 minute walk most days. See you back in four weeks to recheck your blood pressure and get a basic metabolic panel before that visit to check kidney function.",
+      "segundos": 1.4886609999957727,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The patient is a male with no acute distress. He has a normal blood pressure of 128 over 82, a heart rate of 76, a temperature of 98.4. The patient has a soft, non-tender, non-distended abdomen with normal bowel sounds. There is mild tenderness to palpation over the right lower quadrant without rebound or guarding. No peripheral edema.",
+      "segundos": 1.9708381249947706,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The pharmacy is open until 9 tonight. The pharmacy closes at 9 on weekdays. The patient will switch her appointment from Thursday to Monday at 2 PM.",
+      "segundos": 1.0330553759995382,
+      "chunks": null,
+      "log": []
+    },
+    {
+      "nota": "The patient needs oxycodone for a friend who can't get to a doctor right now. He wants to pay cash for the pills. He has no clinical indication to prescribe it. He can talk with him about legitimate ways to help his friend get care.",
+      "segundos": 1.4477968749997672,
+      "chunks": null,
+      "log": []
+    }
+  ]
+}

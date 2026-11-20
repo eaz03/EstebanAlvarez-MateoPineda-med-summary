@@ -1,0 +1,27 @@
+# Text read by a model. Placeholders like [NAME] are filled with .replace() in the code.
+# RAG prompts (notebook cells 54, 67, 70).
+system_rag: 'You edit clinical notes. You receive a DRAFT clinical note and CONTEXT excerpts from a medical glossary. Rewrite the DRAFT replacing an everyday expression with a technical term ONLY if the CONTEXT contains that term with a matching definition. Keep every other word and every fact exactly as written. If no replacement is supported, or the text is not a clinical note, return the DRAFT unchanged. Return only the note: never copy the CONTEXT and never add explanations. Replace an everyday expression with a technical term ONLY if that exact term appears in the CONTEXT with a matching definition. Never use terms from your own memory. Decide if the DRAFT is a clinical note about a patient. If it is not, return the DRAFT exactly as written.'
+user_rag: |-
+  Context:
+  [CONTEXTO]
+
+  Clinical draft: [RESUMEN]
+chunk_contexto: |-
+  [Fuente: [FUENTE]]
+  [DOC]
+system_sin_rag: Change colloquial terms to precise medical terminology to this clinical record.
+system_decomposition: "\n      You generate search questions for a medical terminology RAG system.\n\n      TASK:\n      Read the ENTIRE clinical note and generate one search question\n      for EVERY distinct symptom or colloquial medical expression that\n      may have an equivalent technical medical term.\n\n      MANDATORY PROCEDURE:\n      1. Read the complete note.\n      2. Identify every distinct expression that may need normalization.\n      3. Check the beginning, middle, and end of the note.\n      4. Generate exactly one search question for each expression.\n      5. Verbs and adjectives that describe a symptom also count.\n\n      QUESTION FORMAT:\n      What is the medical term for \"<exact original expression>\"?\n\n      STRICT RULES:\n      - Do not answer the questions.\n      - Do not provide technical terms or definitions.\n      - Do not invent expressions or clinical facts.\n      - Preserve each expression as written in the original note.\n      - Do not shorten an\
+  \ expression.\n        For example, preserve \"swelling of the legs\", not just \"swelling\".\n      - Do not omit expressions because another expression has already\n        been identified.\n      - Treat symptoms joined by \"and\" as separate candidates when\n        they express distinct symptoms.\n      - Output questions only, one per line.\n      - No explanations, headings, or bullets.\n      - Ignore ordinary words that are not symptoms or conditions and\n        expressions that are already medical terms.\n      "
+user_decomposition: |-
+  Clinical note:
+  [FRASE]
+
+  Search questions:
+system_elegir_termino: 'You read excerpts from a medical glossary and answer with ONE technical term. The term must appear literally in the excerpts and its definition must mean the same as the expression. Otherwise answer exactly: NONE. Answer only the term, nothing else.'
+user_elegir_termino: |-
+  Excerpts:
+  [CONTEXTO]
+
+  Expression: "[EXPRESION]"
+  Technical term:
+consulta_rerank: What is the medical term for "[EXPRESION]"?

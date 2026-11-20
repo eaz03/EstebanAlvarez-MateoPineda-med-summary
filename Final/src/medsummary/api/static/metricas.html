@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedSummary · Métricas</title>
+<link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body>
+<main>
+  <section class="tarjeta">
+    <h2>Métricas comparadas</h2>
+    <p class="suave">Calculadas con scripts/generar_tablas.py, con el mismo eval set (10 ejemplos) y el mismo harness. Esta página solo las muestra
+      (carpeta metricas/: scorecard_eficiencia.csv, tabla_cuantizacion.csv y tabla_ablacion.csv). "-" = no aplica.</p>
+  </section>
+  <div id="tablas"></div>
+</main>
+<script src="/static/comun.js"></script>
+<script>
+construirCabecera('/metricas');
+
+async function cargar() {
+  const contenedor = document.getElementById('tablas');
+  try {
+    const tablas = await api('/api/metricas');
+    contenedor.replaceChildren(...tablas.map(t => {
+      const tarjeta = crear('section', { class: 'tarjeta' });
+      tarjeta.appendChild(crear('h2', {}, t.titulo));
+      const columnas = t.columnas.map(c => ({ nombre: c.nombre, numerica: c.decimales !== null }));
+      const filas = t.filas.map(f => t.columnas.map(c => c.decimales === null ? (f[c.clave] ?? '-') : numero(f[c.clave], c.decimales)));
+      tarjeta.appendChild(tabla(columnas, filas));
+      tarjeta.appendChild(crear('p', { class: 'suave' }, t.nota));
+      return tarjeta;
+    }));
+  } catch (error) { contenedor.replaceChildren(crear('p', { class: 'error' }, error.message)); }
+}
+cargar();
+</script>
+</body>
+</html>

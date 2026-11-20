@@ -14,7 +14,7 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 
 **Link de despliegue:** Se utilizó un tunel de Cloudflared local para el despliegue, por lo que la url cambia cada vez que se despliega.
 
-**Link de Weights and Biases:** https://wandb.aimpinedaa4-eafit/medsummary/1e5dhxqe
+**Link de Weights and Biases:** https://wandb.ai/mpinedaa4-eafit/medsummary/1e5dhxqe
 
 ## Instrucciones de ejecución
 

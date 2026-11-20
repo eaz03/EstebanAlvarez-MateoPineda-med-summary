@@ -33,15 +33,25 @@ Para la cuantización se empleó como técnica el GGUF usando llama-cpp. La raz�
 La decisión de realizar la cuantización con int8 o int4 se redujo a las pruebas realizadas con ambas cuantizaciones. Si bien pudimos comprobar (como lo vimos en clase) que la diferencia de latencia entre int8 e int4 no es tan significativa como la que hay entre el modelo sin cuantizar e int8, elegimos quedarnos con int4 por varias razones. Los resultados del harness no fueron tan diferentes entre ambas cuantizaciones, lo que indica que con int4 la pérdida de calidad no es tan significativa como lo podría ser en otros escenarios. Inicialmente probamos el sistema con int8, el cual funcionaba adecuadamente (evidenciado en el harness); sin embargo, pudimos apreciar que con esta cuantización el agente no llamaba nunca la tool del RAG, sin importar el tipo de input que se le pasara. Al intentar los mismos ejemplos con int4, el agente sí pudo reconocer que debía llamar la tool del RAG cuando era pertinente y por este motivo decidimos elegir esta cuantización en lugar de int8.
 
 
-| Dispositivo | Versión | Juez final | BERTScore F1 | Aciertos | p50 (s) | p95 (s) | p50 RAG (s) | Memoria Qwen (GB) | VRAM extra (GB) | Memoria total (GB) |
-|---|---|---|---|---|---|---|---|---|---|---|
-| mps | Antes: Qwen sin cuantizar (bfloat16) | 3.11 | 0.418 | 0.10 | 3.51 | 6.06 | 2.52 | 3.09 | – | 4.35 |
-| mps | Después: Qwen GGUF Q8_0 (~int8) | 3.30 | 0.410 | 0.10 | 3.06 | 4.72 | 2.04 | 1.89 | – | 3.16 |
-| mps | Después: Qwen GGUF Q4_K_M (~int4) | 3.30 | 0.397 | 0.10 | 2.52 | 4.41 | 1.54 | 1.12 | – | 2.38 |
+| Versión | Dispositivo | ROUGE-L | BERTScore F1 | Juez grounding (1-5) | Juez coverage (1-5) | Juez form (1-5) | Juez final ponderado (1-5) | Aciertos de dominio | Latencia p50 (s) | Latencia p95 (s) | Memoria Qwen (GB) | VRAM extra (GB) | Memoria total del sistema (GB) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Antes: Qwen sin cuantizar (bfloat16) | mps | 0.363 | 0.418 | 3.00 | 2.90 | 3.80 | 3.11 | 0.10 | 3.51 | 6.06 | 3.09 | – | 4.35 |
+| Después: Qwen GGUF Q8_0 (~int8) | mps | 0.363 | 0.410 | 3.40 | 3.00 | 3.60 | 3.30 | 0.10 | 3.06 | 4.72 | 1.89 | – | 3.16 |
+| Después: Qwen GGUF Q4_K_M (~int4) · desplegada | mps | 0.340 | 0.397 | 3.40 | 2.90 | 3.80 | 3.30 | 0.10 | 2.52 | 4.41 | 1.12 | – | 2.38 |
+
+
 
 Considerando el trade-off entre eficiencia y precisión, contemplamos perder un  máximo de un 10% del desempeño medido por el harness, para bajar la latencia en al menos un 30%. No consideramos un valor más alto de desempeño, ya que preferimos sacrificar latencia sobre calidad, considerado el contexto médico en que se trabaja, donde prima la factualidad, exactitud, y no es fundamental la velocidad.
 
 # Tabla evolutiva
+
+| Sistema | Dispositivo | ROUGE-L | BERTScore F1 | Juez grounding (1-5) | Juez coverage (1-5) | Juez form (1-5) | Juez final ponderado (1-5) | Aciertos de dominio | Latencia mediana p50 (s) |
+|---|---|---|---|---|---|---|---|---|---|
+| Modelo ajustado (Flan-T5 + LoRA) | mps | 0.381 | 0.444 | 3.40 | 3.00 | 4.00 | 3.38 | 0.10 | 0.98 |
+| RAG ingenuo (Qwen sin cuantizar) | mps | 0.395 | 0.452 | 3.40 | 2.90 | 4.20 | 3.39 | 0.20 | 2.81 |
+| RAG avanzado (Qwen sin cuantizar) | mps | 0.363 | 0.418 | 3.00 | 2.90 | 3.80 | 3.11 | 0.10 | 3.62 |
+| RAG avanzado con Qwen Q4_K_M · desplegado | mps | 0.340 | 0.397 | 3.40 | 2.90 | 3.80 | 3.30 | 0.10 | 2.52 |
+
 
 Según la tabla evolutiva podemos ver la evolución del sistema evaluado con el mismo harness, y con cada modificación. Se midió desde el modelo con fine-tuning, modelo con RAG ingenuo, RAG avanzado, y finalmente el modelo cuantizado desplegado. Se puede observar lo siguiente:
 
@@ -51,7 +61,17 @@ Según la tabla evolutiva podemos ver la evolución del sistema evaluado con el 
 - 
 
 
+
+
 # Ablación
+
+| Configuración | Juez final (1-5) | BERTScore F1 | Aciertos de dominio | RAGAS context recall | RAGAS context precision | RAGAS faithfulness * | RAGAS answer relevancy * | Δ juez vs. completo | p50 RAG (s) | p95 RAG (s) | Notas distintas (de 10) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Sistema completo (hybrid + reranker) | 3.11 | 0.418 | 0.10 | 0.20 | 0.16 | 0.20 | 0.20 | 0.000 | 2.49 | 5.03 | 0 |
+| Sin reranker (solo hybrid) | 2.94 | 0.389 | 0.10 | 0.10 | 0.14 | 0.00 | 0.17 | -0.180 | 2.94 | 5.33 | 5 |
+| Sin hybrid (semántica + reranker) | 3.08 | 0.423 | 0.10 | 0.20 | 0.15 | 0.20 | 0.40 | -0.040 | 2.61 | 4.93 | 3 |
+| Sin reranker ni hybrid (solo semántica) | 3.17 | 0.372 | 0.10 | 0.11 | 0.18 | 0.00 | 0.17 | 0.060 | 2.96 | 5.20 | 7 |
+| Referencia: sin RAG (fine-tuned) | 3.38 | 0.444 | 0.10 | – | – | – | – | 0.265 | – | – | 5 |
 
 # Análisis de errores
 

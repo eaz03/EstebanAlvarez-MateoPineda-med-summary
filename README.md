@@ -12,7 +12,7 @@ Sistema que toma la conversación entre un médico y su paciente y genera un bor
 
 ## Demo desplegada y WandB
 
-**Link de despliegue:** Se utilizó un tunel de Cloudflared local para el despliegue, por lo que la url cambia cada vez que se despliega.
+**Link de despliegue:** Se utilizó un tunel de Cloudflared local para el despliegue, por lo que la url cambia cada vez que se despliega. Para la demo https://asian-vegetables-asylum-databases.trycloudflare.com 
 
 **Link de Weights and Biases:** [https://wandb.ai/mpinedaa4-eafit/medsummary/1e5dhxqe](https://forge.coreweave.com/wandb/mpinedaa4-eafit/medsummary?nw=nwusermpinedaa4)
 
